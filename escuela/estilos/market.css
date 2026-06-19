@@ -198,22 +198,6 @@ footer hr {
     gap: 20px;
 }
 
-/* FONTS */
-@font-face {
-  font-family: 'Montserrat'; /* Información */
-    src: url('fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('woff2'),
-        url('fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Finlandica';
-    src: url('fonts/Finlandica_Headline/FinlandicaHeadline-Italic-VariableFont_wght.ttf') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
   header {
