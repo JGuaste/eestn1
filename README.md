@@ -7,3 +7,5 @@ se agrego pagina de programacion y ccs de programacion (vargas - banega)
 
 
 Probar signo de menú desplegable ▾ ⌵ ﹀(Guastelli)
+
+se actualizo en la carpeta de estilos los archivos base, nav_bar, nav-footer y market
