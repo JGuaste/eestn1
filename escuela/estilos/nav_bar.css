@@ -1,0 +1,111 @@
+/* HEADER SECTION */
+header {
+    background-color: #710404;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    font-family: var(--fuente-informacion);
+}
+
+nav ul li a {
+    font-family: var(--fuente-informacion);
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: start;
+}
+
+li a{
+    padding: 30.3px 20px;
+    font-family: var(--fuente-informacion);
+}
+
+li a:hover {
+    background-color: #8b0808;
+    color: #ffe370;
+    transition: 0.3s;
+} 
+
+header nav ul li a, li {
+    text-decoration: none;
+    color: #fff;
+}
+
+.tecno-contenedor {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+.tecnomarket {
+    font-family: var(--fuente-titulos);
+    color: #fff;
+    font-size:26px;
+}
+
+#a_market {
+    text-decoration: none;
+}
+
+
+/* DESPLEGABLE */
+.menu, .submenu{
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+.menu{
+    display: flex;
+    background:#6b0000;
+}
+.menu > li > a{
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+.menu > li> a:hover{
+    background: #710404;
+}
+.escondido{
+    position: relative;
+}
+.submenu{
+    display: none;
+    position: absolute;
+    top:100%;
+    left: 0;
+    background:#710404;
+    min-width: 160px;
+}
+
+.submenu li a{
+    display: block;
+    color:white;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+.submenu li a:hover{
+    background: #8b0808;
+    color: #ffe370;
+    transition: 0.3s;
+}
+.escondido:hover .submenu{
+    display: block;
+}
+
+/* LOGO */
+.logo img {
+    width: 80px;
+    height: auto;
+    display: block;
+}

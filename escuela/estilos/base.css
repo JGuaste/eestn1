@@ -13,13 +13,13 @@ body {
     --color-sub-menu: #710404;
     --fuente-informacion: 'Montserrat';
     --fuente-titulos: 'Merriweather';
-    --fuente-footer: 'Finlandica';
+    --fuente-footer: 'Finlandica Headline';
 }
 
 /* FUENTES */
 
 /* Info general */.montserrat-uniquifier {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
@@ -35,8 +35,8 @@ body {
     "width" 100;
 }
 
-/* Footer */ .finlandica-text-uniquifier {
-  font-family: "Finlandica", sans-serif;
+/* Footer */ .finlandica-headline-uniquifier {
+  font-family: "Finlandica Headline", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;

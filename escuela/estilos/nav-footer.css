@@ -1,125 +1,57 @@
-/* --- HEADER Y MENÚ (Común para ambas páginas) ---
-El header utiliza display: flex para distribuir los elementos.
+/* FOOTER */
 
-justify-content: space-between: Envía el logo a la izquierda y el menú a la derecha automáticamente.
-
-align-items: center: Alinea todo verticalmente.
-
-position: sticky; top: 0;: Logra que, al hacer scroll, el menú se quede pegado en la parte superior de la ventana, permitiendo que el usuario siempre tenga acceso a la navegación. */
-header { 
-    background: var(--color-menu); 
-    color: white; 
-    padding: 1rem 5%; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    position: sticky; 
-    top: 0; 
-    z-index: 1000; 
+footer {
+    background-color: rgba(0, 0, 0, 0.897);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--fuente-footer);
 }
 
-.logo-contenedor { 
-    display: flex; 
-    align-items: center; 
-    gap: 10px; 
-}
-.logo-img { 
-    width: 40px; 
-    height: 40px; 
-    object-fit: contain; 
-}
-.logo-texto { 
-    font-size: 1.5rem; 
-    font-weight: bold; 
+.ubicacion {
+    width: 40px;
+    height: 30px;
 }
 
-nav ul { 
-    display: flex; 
-    list-style: none;
-     gap: 20px;
-     }
-nav a { 
-    color: white; 
-    text-decoration: none; 
-    transition: 0.3s; 
-}
-nav a:hover {
-     opacity: 0.7; 
-    }
-
-/* Submenú escritorio
-Escritorio: El submenú (.submenu-contenido) está display: none por defecto y se activa con display: block al usar :hover sobre el padre. Su position: absolute hace que flote encima del resto de la página.
-
-El menú principal pasa a ser position: absolute y se apila verticalmente con flex-direction: column.
-
-*/
-.submenu { 
-    position: relative; 
-}
-.submenu-contenido { 
-    display: none; 
-    position: absolute; 
-    background: var(--color-menu); 
-    top: 100%; 
-    left: 0; 
-    min-width: 180px; 
-    border-radius: 5px;
-}
-.submenu:hover .submenu-contenido { 
-    display: block; 
-}
-.submenu li a { 
-    display: block; 
-    padding: 12px 16px; 
-    color: white; 
-    text-decoration: none; 
-}
-.submenu li a:hover { 
-    background: #555; 
-    color: #deff9a; 
+footer p {
+    color: #fff;
+    padding: 0;
+    margin: 0;
 }
 
-/* Menú móvil (Responsividad) 
-Móvil (Media Query): Cuando la pantalla es menor a 768px:*/
-.menu-respon { 
-    display: none; 
-    background: none; 
-    border: none; 
-    color: white; 
-    font-size: 24px; 
-    cursor: pointer; 
+footer strong {
+    text-transform: capitalize;
 }
 
-@media (max-width: 768px) {
-    .menu-respon { 
-        display: block; 
-    }
-    .nav-menu { 
-        display: none; 
-        width: 100%; 
-        position: absolute; 
-        top: 100%; 
-        left: 0; 
-        background: var(--color-menu); 
-        padding: 20px; 
-        z-index: 999;
-    }
-    .nav-menu.active { 
-        display: block; 
-    }
-    nav ul { 
-        flex-direction: column; 
-        gap: 15px; 
-    }
-    .submenu-contenido {
-         position: relative; 
-         background: #222; 
-        }
+footer a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0;
+    margin: 0;
 }
-footer { 
-    background: var(--color-menu); 
-    color: white; 
-    text-align: center; 
-    padding: 20px; 
-    margin-top: 40px; 
+
+footer hr {
+    width: 60%;
+}
+
+.social {
+    width: 40px;
+    height: 40px;
+}
+
+.social img {
+    width: 100%;
+    height: 100%;
+}
+
+.img-contenedor {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
