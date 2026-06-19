@@ -1,0 +1,112 @@
+
+.fondo-main{
+background-image: url("/imagenes/fondo.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 350px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-size: 2rem;
+}
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Flechas */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-arrow.prev {
+  left: 15px;
+}
+
+.carousel-arrow.next {
+  right: 15px;
+}
+
+/* Dots */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #bbb;
+  transition: background 0.3s;
+}
+
+.carousel-dot:hover {
+  background: #555;
+}
+@keyframes carrusel-automatico{
+    0% 
+    , 20% { transform: translateX(0); }
+    
+    /* Transición a Imagen 2 */
+    25%, 45% { transform: translateX(-25%); }
+    
+    /* Transición a Imagen 3 */
+    50%, 70% { transform: translateX(-50%); }
+    
+    /* Transición a Imagen 1 Repetida (da la ilusión de bucle) */
+    75%, 95% { transform: translateX(-75%); }
+    
+    /* Reinicio instantáneo al inicio */
+    100% { transform: translateX(0); }
+}
