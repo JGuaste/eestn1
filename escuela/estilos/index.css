@@ -2,13 +2,16 @@
 auto-fit: El navegador calcula automáticamente cuántas tarjetas caben en el ancho disponible.
 
 minmax(300px, 1fr): Cada tarjeta debe medir al menos 300px. Si sobra espacio, estírate (1fr) para llenarlo.*/
+body{
+    background-color: var(--color-fondo);
+}
 .principal {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
     background-image: url('/imagenes/aniversario-tecnica-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    color: white;
+    color: rgb(255, 253, 253);
     padding: 250px 20px;
     text-align: center;
     font-family: var(--fuente-titulos);
@@ -19,15 +22,28 @@ minmax(300px, 1fr): Cada tarjeta debe medir al menos 300px. Si sobra espacio, es
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 20px; 
     padding: 40px 5%; 
+    color: aliceblue;
 }
 
 .tarjeta-info {
-    background: white;
+    background:   #a31e1efd;
     padding: 30px;
-    border-top: 5px solid #2e7d32;
+    border-top: 5px solid #e0de5ae0;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.575);
+
 }
+.imagen_noticias{
+    display: block;
+    height: 210px;
+}
+.imagen{
+    display: block;
+    justify-content: center;
+    padding: 10px;
+    margin: 15px;
+}
+
 
 
 
