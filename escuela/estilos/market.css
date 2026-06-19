@@ -1,40 +1,235 @@
-/* Tarjetas de productos
-grid-template-columns: Esta es la forma más avanzada y sencilla de hacer una web responsiva.
-
-auto-fit: Dice "acomoda todas las tarjetas que entren".
-
-minmax(250px, 1fr): Le da a cada tarjeta un ancho mínimo de 250px. Si la pantalla es grande, la tarjeta se estira (1fr) para ocupar el espacio restante; si la pantalla es chica, la tarjeta salta a la línea de abajo. */
-.contenedor {
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 20px; 
-    padding: 20px; 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-/*box-shadow: Crea esa sombra suave debajo de las tarjetas (tarjeta-producto)
 
-transition: 0.3s + :hover: Hace que los cambios (como al pasar el mouse por un botón) ocurran suavemente en 0.3 segundos.*/
-.tarjeta-producto {
-    background: white; 
-    padding: 20px; 
-    border-radius: 10px; 
-    text-align: center; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-.precio { 
-    font-weight: bold; 
-    color: #2e7d32; 
-    font-size: 1.2rem; 
+
+main {
+    flex: 1;
+}
+
+p {
+    text-align: justify;
+}
+
+/* HEADER SECTION */
+header {
+    background-color: #710404;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: start;
+}
+
+li a{
+    padding: 30.3px 20px;
+    font-family: 'Montserrat';
+}
+
+li a:hover {
+    background-color: #8b0808;
+    color: #ffe370;
+    transition: 0.3s;
+} 
+
+header nav ul li a, li {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* DESPLEGABLE */
+.menu, .submenu{
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+.menu{
+    display: flex;
+    background:#6b0000;
+}
+.menu > li > a{
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+.menu > li> a:hover{
+    background: #710404;
+}
+.escondido{
+    position: relative;
+}
+.submenu{
+    display: none;
+    position: absolute;
+    top:100%;
+    left: 0;
+    background:#710404;
+    min-width: 160px;
+}
+
+.submenu li a{
+    display: block;
+    color:white;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+.submenu li a:hover{
+    background: #8b0808;
+    color: #ffe370;
+    transition: 0.3s;
+}
+.escondido:hover .submenu{
+    display: block;
+}
+
+/* LOGO */
+.logo img {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+
+
+/* MARKETPLACE */
+
+.marketplace {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    padding: 40px 0;
+    gap: 40px;
+    justify-items: center;
+}
+
+.producto {
+    width: 350px;
+    height: 300px;
+    border-radius: 12px;
+    border: 3px solid rgb(70, 182, 70, 0.431);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.h2 {
+    text-align: center;
+}
+
+
+
+/* FOOTER */
+
+footer {
+    background-color: rgba(0, 0, 0, 0.897);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    font-family: 'Finlandica';
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ubicacion {
+    width: 40px;
+    height: 30px;
+}
+
+footer p {
+    color: #fff;
+    font-family: 'Finlandica';
+    padding: 0;
+    margin: 0;
+}
+
+footer strong {
+    text-transform: capitalize;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+footer hr {
+    width: 60%;
+}
+
+.social {
+    width: 40px;
+    height: 40px;
+}
+
+.social img {
+    width: 100%;
+    height: 100%;
+}
+
+.img-contenedor {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* FONTS */
+@font-face {
+  font-family: 'Montserrat'; /* Información */
+    src: url('fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('woff2'),
+        url('fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Finlandica';
+    src: url('fonts/Finlandica_Headline/FinlandicaHeadline-Italic-VariableFont_wght.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 5px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+
+  a {
+    font-size: 12px;
+    padding-top: 20px;
+  }
+
+  .header__nav a {
     margin: 10px 0; 
-}
-.btn-whatsapp { 
-    display: inline-block; 
-    background: #25d366;
-    color: white; 
-    padding: 10px 15px; 
-    text-decoration: none; 
-    border-radius: 5px; 
-    transition: 0.3s; 
-}
-.btn-whatsapp:hover { 
-    opacity: 0.8;
+  }
 }
