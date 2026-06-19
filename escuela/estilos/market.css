@@ -1,0 +1,40 @@
+/* Tarjetas de productos
+grid-template-columns: Esta es la forma más avanzada y sencilla de hacer una web responsiva.
+
+auto-fit: Dice "acomoda todas las tarjetas que entren".
+
+minmax(250px, 1fr): Le da a cada tarjeta un ancho mínimo de 250px. Si la pantalla es grande, la tarjeta se estira (1fr) para ocupar el espacio restante; si la pantalla es chica, la tarjeta salta a la línea de abajo. */
+.contenedor {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+    padding: 20px; 
+}
+/*box-shadow: Crea esa sombra suave debajo de las tarjetas (tarjeta-producto)
+
+transition: 0.3s + :hover: Hace que los cambios (como al pasar el mouse por un botón) ocurran suavemente en 0.3 segundos.*/
+.tarjeta-producto {
+    background: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    text-align: center; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+.precio { 
+    font-weight: bold; 
+    color: #2e7d32; 
+    font-size: 1.2rem; 
+    margin: 10px 0; 
+}
+.btn-whatsapp { 
+    display: inline-block; 
+    background: #25d366;
+    color: white; 
+    padding: 10px 15px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: 0.3s; 
+}
+.btn-whatsapp:hover { 
+    opacity: 0.8;
+}

@@ -1,0 +1,15 @@
+/* --- RESET --- Al quitar los márgenes predeterminados de los navegadores y usar border-box, te aseguras de que el tamaño de los elementos sea exacto,*/
+* { 
+    margin: 0; padding: 0; 
+    box-sizing: border-box; 
+}
+body { 
+    font-family: sans-serif; 
+    background: #f4f4f4; 
+    line-height: 1.6; 
+}
+:root{
+    --color-menu: #7a0909;
+    --color-fondo-nav: #e91d1d;
+    --fuente-titulos: Verdana;
+}
