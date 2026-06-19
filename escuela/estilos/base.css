@@ -9,7 +9,35 @@ body {
     line-height: 1.6; 
 }
 :root{
-    --color-menu: #7a0909;
-    --color-fondo-nav: #e91d1d;
-    --fuente-titulos: Verdana;
+    --color-menu: #710404;
+    --color-sub-menu: #710404;
+    --fuente-informacion: 'Montserrat';
+    --fuente-titulos: 'Merriweather';
+    --fuente-footer: 'Finlandica';
+}
+
+/* FUENTES */
+
+/* Info general */.montserrat-uniquifier {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+
+/* Titulos */ .merriweather-uniquifier {
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+    "width" 100;
+}
+
+/* Footer */ .finlandica-text-uniquifier {
+  font-family: "Finlandica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
