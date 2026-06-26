@@ -1,5 +1,5 @@
 
-.fondo-main{
+/*.fondo-main{
 background-image: url("/imagenes/fondo.jpg");
 background-size: cover;
 background-position: center;
@@ -10,103 +10,146 @@ align-items: center;
 justify-content: center;
 color: white;
 font-size: 2rem;
+}/*
+
+/* Animación de entrada */
+body {
+    animation: aparecer 1.5s ease;
+     
 }
-.carousel {
+
+/* Encabezado */
+.fondo-main {
+  
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: linear-gradient(-45deg, #0f2a0f, #0f6831, #10b834, #0f2a0f);
+    background-size: 400% 400%;
+    animation: fondoMovimiento 10s ease infinite;
+    font-size: 45px;
+    color: white;
+    
+}
+.fondo-historia {
+  
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: linear-gradient(-45deg, #38030c, #d3e01a, #e4e010, #033810);
+    background-size: 400% 400%;
+    animation: fondoMovimiento 10s ease infinite;
+    font-size: 45px;
+    color: white;
+    
+}
+
+
+  .textoInfo{
+    text-align: center;
+    text-decoration-color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  p{
+    text-align: center;
+  
+    padding:30px;
+  }
+
+/* Título */
+ h1 {
+  font-family: var(--fuente-informacion);
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Movimiento del fondo */
+@keyframes fondoMovimiento {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Aparición de la página */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Contenedor principal */
+.carrusel {
   position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.carousel-viewport {
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
-
-.carousel-track {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-
-.carousel-track::-webkit-scrollbar {
-  display: none;
-}
-
-.carousel-slide {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-}
-
-.carousel-slide img {
   width: 100%;
+  max-width: 800px;
   height: 400px;
-  object-fit: cover;
-  display: block;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: #38030c;/*NO LO TOMA*/
 }
 
-/* Flechas */
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  text-decoration: none;
-  font-size: 2.5rem;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background 0.3s;
-  z-index: 10;
-}
-
-.carousel-arrow:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.carousel-arrow.prev {
-  left: 15px;
-}
-
-.carousel-arrow.next {
-  right: 15px;
-}
-
-/* Dots */
-.carousel-nav {
+/* La tira que contiene las 4 imágenes en línea */
+.tarjetas {
   display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 16px;
+  width: 400%; /* 4 imágenes = 400% del ancho */
+  height: 100%;
+  
+  /* Aplicamos la animación automática */
+  animation: carrusel-automatico 16s infinite ease-in-out;
 }
 
-.carousel-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #bbb;
-  transition: background 0.3s;
+/* Cada imagen ocupa el 25% de la tira (el 100% del contenedor visible) */
+.tarjeta {
+  width: 25%;
+  height: 100%;
 }
 
-.carousel-dot:hover {
-  background: #555;
+.tarjeta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-@keyframes carrusel-automatico{
-    0% 
-    , 20% { transform: translateX(0); }
-    
-    /* Transición a Imagen 2 */
-    25%, 45% { transform: translateX(-25%); }
-    
-    /* Transición a Imagen 3 */
-    50%, 70% { transform: translateX(-50%); }
-    
-    /* Transición a Imagen 1 Repetida (da la ilusión de bucle) */
-    75%, 95% { transform: translateX(-75%); }
-    
-    /* Reinicio instantáneo al inicio */
-    100% { transform: translateX(0); }
+
+/* --- LA MAGIA DE LA ANIMACIÓN --- */
+@keyframes carrusel-automatico {
+  /* Imagen 1 (0% al 20% del tiempo total) */
+  0%, 20% {
+    transform: translateX(0%);
+  }
+  
+  /* Transición hacia la Imagen 2 (en el 25% ya llegó) */
+  25%, 45% {
+    transform: translateX(-25%);
+  }
+  
+  /* Transición hacia la Imagen 3 */
+  50%, 70% {
+    transform: translateX(-50%);
+  }
+  
+  /* Transición hacia la Imagen 4 */
+  75%, 95% {
+    transform: translateX(-75%);
+  }
+  
+  /* Vuelve al inicio rápidamente al terminar el ciclo */
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* OPCIONAL: Pausa la animación cuando el usuario pasa el mouse por encima */
+.carrusel:hover .tarjetas {
+  animation-play-state: paused;
 }
