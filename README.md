@@ -13,4 +13,5 @@ se actualizo en la carpeta de estilos los archivos base.css, nav_bar.css, nav-fo
 se actualizo en la carpeta escuela el arvhivo indexmarket.html (astobiza)
 
 se actualizo index.html y index.css (rayu orellano)
-
+Agregue las paginas de las tres modalidades y la de historia. agregue el css de lo mencionado,e imagenes  Y ELIMINE la pagina
+progracion(chiara)
