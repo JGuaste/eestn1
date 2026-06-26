@@ -16,3 +16,5 @@ se actualizo index.html y index.css (rayu orellano)
 
 Agregue las paginas de las tres modalidades y la de historia. agregue el css de lo mencionado,e imagenes  Y ELIMINE la pagina
 progracion(chiara)
+
+Se actualizo: indexmarket, y nav-footer. (Astobiza)
