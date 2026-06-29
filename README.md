@@ -18,3 +18,4 @@ Agregue las paginas de las tres modalidades y la de historia. agregue el css de 
 progracion(chiara)
 
 Se actualizo: indexmarket, y nav-footer. (Astobiza)
+Se actualiza el nav-footer.css (Guastelli)
