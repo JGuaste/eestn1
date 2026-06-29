@@ -68,7 +68,7 @@ El menú principal pasa a ser position: absolute y se apila verticalmente con fl
     display: none; 
     position: absolute; 
     background: #710404; 
-    top: 30px;
+    top: 100%;
     right: 0;
     left: 0;
     min-width: 180px;
