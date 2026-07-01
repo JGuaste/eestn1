@@ -3,40 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Marketplace de servicios técnicos de la Escuela de Educación Secundaria Técnica N°1 'Ejército Argentino', Los Toldos.">
     <title>TecnoMarket - Escuela Técnica</title>
+    <link rel="icon" href="imagenes/Logo.png" type="image/png">
     <link rel="stylesheet" href="estilos/base.css">
     <link rel="stylesheet" href="estilos/market.css">
     <link rel="stylesheet" href="estilos/nav-footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Finlandica+Headline:ital,wght@0,100..900;1,100..900&family=Finlandica+Text:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finlandica+Headline:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
     <div class="logo-contenedor">
-        <img src="imagenes/Logo.png" alt="Logo" class="logo-img">
+        <img src="imagenes/Logo.png" alt="Logo de TecnoMarket" class="logo-img">
         <span class="logo-texto">TecnoMarket</span>
     </div>
-    
-    <button class="menu-respon" id="menu-respon">☰</button>
+
+    <button class="menu-respon" id="menu-respon" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">☰</button>
 
     <nav class="nav-menu" id="nav-menu">
         <ul>
-            <li><a href="index.html">Inicio</a></li> <div class="linea"></div>
+            <li><a href="index.html">Inicio</a></li>
+            <div class="linea"></div>
             <li class="submenu">
                 <a href="#">Modalidades</a>
                 <ul class="submenu-contenido">
                     <li><a href="#">Programación</a></li>
-                    <li><a href="#">Electromecánica</a></li> 
-                    <li><a href="#">Alimentos</a></li> 
+                    <li><a href="#">Electromecánica</a></li>
+                    <li><a href="#">Alimentos</a></li>
                 </ul>
             </li>
             <div class="linea"></div>
             <li class="submenu">
                 <a href="#">Nosotros</a>
                 <ul class="submenu-contenido">
-                    <li><a href="#">Historias</a></li>
+                    <li><a href="#">Historia </a></li>
                     <li><a href="#">Noticias</a></li>
                     <li><a href="#">Contacto</a></li>
                     <li><a href="#">Cooperadora</a></li>
@@ -44,51 +49,82 @@
                 </ul>
             </li>
             <div class="linea"></div>
-            <li><a href="#">Marketplace</a></li>
+            <li><a href="indexmarket.html" aria-current="page">Marketplace</a></li>
             <div class="linea"></div>
         </ul>
     </nav>
 </header>
+<div class="capa-transparente">
+<main>
+    <section class="market-hero">
+        <h1>Marketplace de Servicios Técnicos</h1>
+        <p>Trabajos reales hechos por estudiantes de la escuela, organizados por especialidad.</p>
+    </section>
 
-<main class="contenedor">
-    <div class="tarjeta-producto">
-        
-        <h3>Reparación de PC</h3>
-        <p class="precio">$15.000</p>
-        <p>Servicio técnico profesional de mantenimiento.</p>
-        <a href="#" class="btn-whatsapp">Pedir por WhatsApp</a>
+    <div class="market-filtros" role="group" aria-label="Filtrar servicios por categoría">
+        <button class="filtro-chip" data-categoria="todos" aria-pressed="true">Todos</button>
+        <button class="filtro-chip" data-categoria="programacion" aria-pressed="false">Programación</button>
+        <button class="filtro-chip" data-categoria="electromecanica" aria-pressed="false">Electromecánica</button>
+        <button class="filtro-chip" data-categoria="alimentos" aria-pressed="false">Alimentos</button>
     </div>
-    <div class="tarjeta-producto">
-        <h3>Reparación de PC</h3>
-        <p class="precio">$15.000</p>
-        <p>Servicio técnico profesional de mantenimiento.</p>
-        <a href="#" class="btn-whatsapp">Pedir por WhatsApp</a>
-    </div>
-    <div class="tarjeta-producto">
-        <h3>Reparación de PC</h3>
-        <p class="precio">$15.000</p>
-        <p>Servicio técnico profesional de mantenimiento.</p>
-        <a href="#" class="btn-whatsapp">Pedir por WhatsApp</a>
-    </div>
-    <div class="tarjeta-producto">
-        <h3>Reparación de PC</h3>
-        <p class="precio">$15.000</p>
-        <p>Servicio técnico profesional de mantenimiento.</p>
-        <a href="#" class="btn-whatsapp">Pedir por WhatsApp</a>
-    </div>
+
+    <section class="contenedor">
+        <article class="tarjeta-producto" data-categoria="electromecanica" style="--orden: 0;">
+            <span class="categoria-badge" data-categoria="electromecanica">Electromecánica</span>
+            <h3>Compost elaborado</h3>
+            <p class="precio">$6.000</p>
+            <div class="producto"><img src="imagenes/Barra-ejemplo.png" alt=""></div>
+            <p>Compost orgánico producido por el taller de Electromecánica a partir de residuos de la escuela. Ideal para huerta y jardín.</p>
+            <a href="https://wa.me/5492358410593" class="btn-whatsapp">
+                <img src="imagenes/whatsapp.png" alt="" width="20" height="20">
+                Pedir por WhatsApp
+            </a>
+        </article>
+        <article class="tarjeta-producto" data-categoria="alimentos" style="--orden: 1;">
+            <span class="categoria-badge" data-categoria="alimentos">Alimentos</span>
+            <h3>Barritas de cereal</h3>
+            <p class="precio">$1.500</p>
+            <p>Barritas de cereal artesanales, elaboradas por el taller de Alimentos con ingredientes naturales.</p>
+            <a href="https://wa.me/5492358410593" class="btn-whatsapp">
+                <img src="imagenes/whatsapp.png" alt="" width="20" height="20">
+                Pedir por WhatsApp
+            </a>
+        </article>
+
+        <p class="market-vacio" id="market-vacio" style="display: none;">Ningún producto encontrado.</p>
+    </section>
 </main>
+</div>
     <footer>
-        <p>Escuela de Educación Secundaria Técnica N°1 "Ejetcito Argentino"</p>
-        <p>MailTécnica@gmail.com</p>
-        <p><a href="https://www.google.com/maps/place/Escuela+De+Educaci%C3%B3n+Secundaria+T%C3%A9cnica+N%C2%BA1+%22Ej%C3%A9rcito+Argentino%22/@-34.9995008,-61.0369536,14z/data=!4m6!3m5!1s0x95bf4b57ed7cf6b1:0x5ee52c52f44d2436!8m2!3d-34.995334!4d-61.045388!16s%2Fg%2F11b7q8ndb6?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">San Martín 1655, B6015, Los Toldos <img src="imagenes/Ubicacion.png" alt="Ubicación" class="ubicacion"></a></p>
-        <strong>provincia de buenos aires</strong>
-        <hr>
-        <div class="img-contenedor">
-        <div class="social"><a href="https://www.facebook.com/escuela.tecnica.52/?locale=es_LA" target="_blank"><img src="imagenes/facebook.png" alt="Facebook"></a></div>
-        <div class="social"><a href="https://www.instagram.com/escuelatecnica1_viamonte/" target="_blank"><img src="imagenes/instagram.png" alt=""></a></div>
+        <div class="footer-columnas">
+            <div class="footer-col reveal" style="--retraso: 0s;">
+                <h4>E.E.S.T.</h4>
+                <p>Escuela de Educación Secundaria Técnica N°1 "Ejército Argentino"</p>
+                <p class="footer-direccion">
+                    <img src="imagenes/Ubicacion.png" alt="" class="ubicacion">
+                    <a href="https://www.google.com/maps/place/Escuela+De+Educaci%C3%B3n+Secundaria+T%C3%A9cnica+N%C2%BA1+%22Ej%C3%A9rcito+Argentino%22/@-34.9995008,-61.0369536,14z/data=!4m6!3m5!1s0x95bf4b57ed7cf6b1:0x5ee52c52f44d2436!8m2!3d-34.995334!4d-61.045388!16s%2Fg%2F11b7q8ndb6?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">San Martín 1655, B6015, Los Toldos</a>
+                </p>
+            </div>
+
+            <div class="footer-col reveal" style="--retraso: 0.12s;">
+                <h4>Contacto</h4>
+                <p><a href="mailto:tecnica@gmail.com">eest1gralviamonte@abc.gob.ar</a></p>
+                <p>02358 44-4142</p>
+            </div>
+
+            <div class="footer-col reveal" style="--retraso: 0.24s;">
+                <h4>Seguinos</h4>
+                <div class="footer-redes">
+                    <div class="social"><a href="https://www.facebook.com/escuela.tecnica.52/?locale=es_LA" target="_blank" rel="noopener noreferrer" aria-label="Facebook de la escuela"><img src="imagenes/facebook.gif" alt=""></a></div>
+                    <div class="social"><a href="https://www.instagram.com/escuelatecnica1_viamonte/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la escuela"><img src="imagenes/instagram.gif" alt=""></a></div>
+                </div>
+            </div>
         </div>
-        <hr>
-        <p>© 2026. Todos los derechos reservados.</p>
+
+        <div class="footer-inferior">
+            <p style="text-transform: capitalize;">provincia de buenos aires</p>
+            <strong>© 2026. Todos los derechos reservados.</strong>
+        </div>
     </footer>
 <script src="script.js"></script>
 </body>
