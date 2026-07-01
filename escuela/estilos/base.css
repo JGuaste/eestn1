@@ -1,44 +1,183 @@
-/* --- RESET --- Al quitar los márgenes predeterminados de los navegadores y usar border-box, te aseguras de que el tamaño de los elementos sea exacto,*/
-* { 
-    margin: 0; padding: 0; 
-    box-sizing: border-box; 
-}
-body { 
-    font-family: sans-serif; 
-    background: #f4f4f4; 
-    line-height: 1.6; 
-}
-:root{
-    --color-menu: #710404;
-    --color-sub-menu: #710404;
-    --fuente-informacion: 'Montserrat';
-    --fuente-titulos: 'Merriweather';
-    --fuente-footer: 'Finlandica Headline';
-    --color-fondo: #dbcdcdde;
+/* --- RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* FUENTES */
+:root {
+    /* --- Paleta de la escuela ---*/
+    --color-menu: #7a0f0f;
+    --color-menu-oscuro: #4a0808;
+    --color-menu-claro: #9c1c1c;
 
-/* Info general */.montserrat-uniquifier {
+    --color-acento: #d8ae3f;        /* dorado: detalles, hover, bordes */
+    --color-acento-suave: #f1cf7a;  /* dorado claro: texto sobre fondo oscuro */
+
+    --color-whatsapp: #25d366;
+    --color-whatsapp-oscuro: #1da851;
+
+    --color-fondo-tarjeta: rgba(10, 5, 5, 0.45);
+    --color-texto-claro: #ffffff;
+    --color-texto-suave: #e9dede;
+
+    /* Categorías del marketplace */
+    --color-cat-programacion: #3f7fd8;
+    --color-cat-electromecanica: #d8ae3f;
+    --color-cat-alimentos: #c97a3f;
+
+    /* Tipografías: una por rol, usadas siempre a través de estas variables
+       (NO se modifican: Montserrat / Merriweather / Finlandica Headline) */
+    --fuente-barnav: 'Montserrat', sans-serif;
+    --fuente-informacion: 'Montserrat', sans-serif;
+    --fuente-titulos: 'Titillium Web', serif;
+    --fuente-footer: 'Finlandica Headline', sans-serif;
+
+    /* Espaciados y bordes reutilizables */
+    --radio-borde: 12px;
+    --sombra-suave: 0 4px 10px rgba(0, 0, 0, 0.25);
+    --sombra-fuerte: 0 14px 28px rgba(0, 0, 0, 0.35);
+    --transicion: 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fuente-informacion);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-texto-claro);
+}
+
+main {
+    flex: 1;
+}
+
+/* --- Sistema de animación "reveal" ---
+Cualquier elemento con la clase .reveal arranca invisible y corrido hacia
+abajo; cuando script.js detecta (con IntersectionObserver) que entró en
+pantalla, le agrega .visible y ahí dispara la transición. El delay
+escalonado (--retraso) hace que varios elementos no aparezcan todos
+juntos, sino en cadena. */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    transition-delay: var(--retraso, 0s);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Accesibilidad: que se note el foco al navegar con teclado */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--color-acento);
+    outline-offset: 2px;
+}
+
+/* Reduce el movimiento si el usuario lo pidió en su sistema operativo */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* FUENTES — clases utilitarias por si se necesitan fuera de los roles fijos */
+.montserrat-uniquifier {
   font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: 400;
   font-style: normal;
 }
 
-
-/* Titulos */ .merriweather-uniquifier {
-    font-family: "Merriweather", serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-variation-settings:
-    "width" 100;
+.titillium-web-extralight {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
-/* Footer */ .finlandica-headline-uniquifier {
-  font-family: "Finlandica Headline", sans-serif;
+.titillium-web-light {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.titillium-web-regular {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.titillium-web-semibold {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.titillium-web-bold {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.titillium-web-black {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.titillium-web-extralight-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.titillium-web-light-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.titillium-web-regular-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.titillium-web-semibold-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.titillium-web-bold-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+.finlandica-headline-uniquifier {
+  font-family: 'Finlandica Headline', sans-serif;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: 400;
   font-style: normal;
 }

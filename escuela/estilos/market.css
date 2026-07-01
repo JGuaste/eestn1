@@ -1,73 +1,275 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+body {
+    background-image: url("../imagenes/fondoescuela.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-body {
+.capa-transparente {
+    background-color: rgba(0, 0, 0, 0.77);
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* --- HERO del marketplace --- */
+.market-hero {
+    text-align: center;
+    padding: 50px 5% 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: aparecer 0.8s ease both;
+}
+
+.market-hero h1 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 18px;
+    text-shadow: var(--sombra-suave);
+    position: relative;
+    display: inline-block;
+}
+
+.market-hero h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: var(--color-acento);
+    margin: 14px auto 0;
+    border-radius: 999px;
+    /* La línea crece desde el centro, como una pincelada */
+    animation: crecer-linea 0.6s ease 0.5s both;
+}
+
+@keyframes crecer-linea {
+    from { width: 0; opacity: 0; }
+    to { width: 70px; opacity: 1; }
+}
+
+.market-hero p {
+    font-family: var(--fuente-informacion);
+    color: #3a3434;
+    background: rgba(255, 255, 255, 0.78);
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin-top: 4px;
+    animation: aparecer 0.8s ease 0.2s both;
+}
+
+/* --- Filtros por categoría --- */
+.market-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 5% 30px;
+    animation: aparecer 0.8s ease 0.35s both;
+}
+
+.filtro-chip {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fuente-informacion);
+    background: rgba(0, 0, 0, 0.45);
+    border: 1.5px solid rgba(255, 255, 255, 0.55);
+    color: var(--color-texto-claro);
+    padding: 9px 20px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: var(--transicion);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1;
+    box-shadow: var(--sombra-suave);
+}
+
+.filtro-chip:hover {
+    border-color: var(--color-acento);
+    transform: translateY(-2px);
+}
+
+.filtro-chip[aria-pressed="true"] {
+    background: var(--color-acento);
+    border-color: var(--color-acento);
+    color: #2b1f00;
+    font-weight: 600;
+    animation: pulso-chip 0.4s ease;
+}
+
+.filtro-chip:active {
+    transform: scale(0.95);
+}
+
+@keyframes pulso-chip {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+/* --- Grilla de tarjetas --- */
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 10px 5% 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* backdrop-filter */
+.tarjeta-producto {
+    position: relative;
+    background: var(--color-fondo-tarjeta);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 26px 22px 22px;
+    border-radius: var(--radio-borde);
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
+    transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion), opacity 0.35s ease;
+    animation: aparecer-tarjeta 0.6s ease both;
+    animation-delay: calc(0.45s + var(--orden, 0) * 0.12s);
 }
 
-main {
-    flex: 1;
+@keyframes aparecer-tarjeta {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
-p {
-    text-align: justify;
+/* Estado que usa script.js para esconder/mostrar con una transición suave
+en vez de cortar de golpe con display:none. */
+.tarjeta-producto.oculta {
+    opacity: 0;
+    transform: scale(0.92);
+    pointer-events: none;
 }
 
-
-
-
-
-/* MARKETPLACE */
-
-.marketplace {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    padding: 40px 0;
-    gap: 40px;
-    justify-items: center;
+.tarjeta-producto:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-fuerte);
+    border-color: var(--color-acento);
 }
 
+.tarjeta-producto h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem;
+}
+
+.tarjeta-producto p {
+    font-family: var(--fuente-informacion);
+    color: var(--color-texto-suave);
+    font-size: 0.95rem;
+}
+
+/* Etiqueta chica arriba de cada tarjeta */
+.categoria-badge {
+    align-self: center;
+    font-family: var(--fuente-informacion);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 999px;
+    color: #fff;
+}
+
+.categoria-badge[data-categoria="programacion"] { background: var(--color-cat-programacion); }
+.categoria-badge[data-categoria="electromecanica"] { background: var(--color-cat-electromecanica); color: #2b1f00; }
+.categoria-badge[data-categoria="alimentos"] { background: var(--color-cat-alimentos); }
+
+.precio {
+    font-weight: bold;
+    color: var(--color-acento-suave);
+    font-size: 1.3rem;
+    margin: 4px 0;
+}
+
+/* Producto */
 .producto {
-    width: 350px;
-    height: 300px;
-    border-radius: 12px;
-    border: 3px solid rgb(70, 182, 70, 0.431);
+    width: 300px;
+    height: 200px;
     display: flex;
     align-items: center;
-    flex-direction: column;
     justify-content: center;
 }
 
-.h2 {
-    text-align: center;
-    font-family: var(--fuente-titulos);
+.producto img {
+    width: 100%;
+    height: 100%;
 }
 
-
-
-
-
-/* MEDIA QUERIES */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 5px;
-    display: flex;
-    justify-items: center;
+/* Botón de WhatsApp con ícono + texto */
+.btn-whatsapp {
+    display: inline-flex;
     align-items: center;
-  }
+    justify-content: center;
+    gap: 8px;
+    background: var(--color-whatsapp);
+    color: white;
+    padding: 11px 18px;
+    text-decoration: none;
+    border-radius: 6px 6px 14px 14px;
+    transition: var(--transicion);
+    border-bottom: 4px solid var(--color-whatsapp-oscuro);
+    font-family: var(--fuente-informacion);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top: auto;
+}
 
-  nav ul li a {
-    font-size: 18px;
-    margin-top:20px;
-  }
+.btn-whatsapp img {
+    width: 20px;
+    height: 20px;
+}
 
-  .header__nav a {
-    margin: 10px 0; 
-  }
+.btn-whatsapp:hover {
+    background: var(--color-whatsapp-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover img {
+    animation: latido 0.6s ease;
+}
+
+@keyframes latido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.btn-whatsapp:active {
+    transform: translateY(0);
+}
+
+/* Estado vacío del filtro (por ejemplo, la categoría Programación) */
+.market-vacio {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 50px 20px;
+    font-family: var(--fuente-informacion);
+    color: var(--color-texto-suave);
+    font-size: 1.1rem;
 }
