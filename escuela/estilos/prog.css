@@ -13,9 +13,38 @@ font-size: 2rem;
 }/*
 
 /* Animación de entrada */
+ html{
+  scroll-behavior: smooth;
+ }
 body {
+ 
     animation: aparecer 1.5s ease;
      
+    background-color: #ffe9e18f;
+}
+/* Botón redondo */
+.boton-redondo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #5c1104;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+
+  
+  /* Centrado básico en pantalla (opcional) */
+  margin: 20px auto; 
+}
+
+.boton-redondo:hover {
+  background-color: #e6e1a5;
+  transform: scale(1.1);
 }
 
 /* Encabezado */
@@ -33,39 +62,121 @@ body {
     color: white;
     
 }
-.fondo-historia {
-  
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    background: linear-gradient(-45deg, #38030c, #d3e01a, #e4e010, #033810);
-    background-size: 400% 400%;
-    animation: fondoMovimiento 10s ease infinite;
-    font-size: 45px;
-    color: white;
-    
+.fondoProgramacion{
+ background-image:  url(/imagenes/fondoprogram.png);
+
 }
-
-
-  .textoInfo{
-    text-align: center;
+  .textoInfo p{
+   
     text-decoration-color: rgb(0, 0, 0);
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:var(--fuente-informacion);
+   width: 850px;
+   text-align: justify;
+   margin:0 auto; 
   }
   p{
-    text-align: center;
-  
-    padding:30px;
+      font-family:var(--fuente-informacion);
+   font-size: 20px;
+   color:rgb(5, 0, 0);
+    margin: 10px;
   }
+.InfModalidad h1{
+  color:rgb(0, 0, 0);
 
+text-align: center;
+}
 /* Título */
- h1 {
+ .fondo-main h1 {
   font-family: var(--fuente-informacion);
     text-align: center;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+h2{
+  color:rgb(0, 0, 0);
+text-align: center;
+}
+h3{
+  margin:15px;
+}
+
+
+/*HISTORIA*/
+ .fondo-historia{
+ 
+  background-image:
+
+   linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+   url(/imagenes/probarfondohistoria.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 250px 20px;
+    text-align: center;
+    font-family: var(--fuente-titulos);
+  
+
+}
+.fondo-historia h1{
+  font-size: 80px;
+
+}
+.fondoParaHis{
+  background-image: url(/imagenes/fondogeneral.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.imagenes img{
+  width: 400px;
+float: right ;
+margin-top: 6px;
+}
+.fondoAlimentos{
+  background-image: url(/imagenes/alimentosfondo.png);
+}
+
+.TextoInicioHistoria p{
+  font-family:var(--fuente-informacion);
+    text-align: center;
+   color:rgb(255, 255, 255);
+    padding:30px;
+    font-size: 30px;
+
+}
+/*TARJETAS*/
+.contenedor2 { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    padding: 40px 5%; 
+}
+
+
+.tarjeta-1 {
+    background: white;
+    padding: 35px;
+    border-top: 5px solid #2e7d32;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.tarjeta-1 p{
+   margin:15px;
+
+}
+
+
+.contenedor{
+ 
+  display:flex;
+  flex-direction: column;
+   justify-content: center;
+   align-items: stretch;
+  
+      
 }
 
 /* Movimiento del fondo */
