@@ -209,16 +209,19 @@ en vez de cortar de golpe con display:none. */
 
 /* Producto */
 .producto {
-    width: 300px;
+    width: 220px;
     height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 10px;
 }
 
 .producto img {
     width: 100%;
     height: 100%;
+    border-radius: 12px;
+
 }
 
 /* Botón de WhatsApp con ícono + texto */
@@ -237,7 +240,7 @@ en vez de cortar de golpe con display:none. */
     font-family: var(--fuente-informacion);
     font-weight: 600;
     font-size: 0.95rem;
-    margin-top: auto;
+    margin-top: 10px;
 }
 
 .btn-whatsapp img {
