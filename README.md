@@ -20,3 +20,5 @@ progracion(chiara)
 Se actualizo: indexmarket, y nav-footer. (Astobiza)
 
 Se actualiza el nav-footer.css (Guastelli)
+
+index finalizado del market (grupo 2)
