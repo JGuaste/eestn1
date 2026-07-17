@@ -1,0 +1,170 @@
+/* Estilos base del banner */
+.banner-contenedor {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    background: linear-gradient(135deg, #2e0707 0%, #971010 100%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Animación del texto (se desliza desde abajo y aparece) */
+.banner-contenido h1 {
+    animation: deslizarArriba 1.5s ease-out forwards;
+    opacity: 0;
+    margin-bottom: 10px;
+    font-size: 3rem;
+}
+
+
+
+/* Definición de los fotogramas clave (keyframes) */
+@keyframes deslizarArriba {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+  .coop-main{
+    background:#f6f1ea;
+    color:#241016;
+    font-family:var(--fuente-informacion);
+    line-height:1.5;
+  }
+  .coop-main *{ box-sizing:border-box; }
+  .coop-main h1, .coop-main h2, .coop-main h3{ font-family:var(--fuente-titulos); margin:0; }
+  .coop-main p{ margin:0; }
+  .coop-main ul{ margin:0; padding:0; list-style:none; }
+
+  .coop-wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  .coop-eyebrow{
+    font-family:var(--fuente-titulos);
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#c17a4a;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .coop-eyebrow::before{
+    content:"";
+    width:22px; height:1px;
+    background:#c17a4a;
+  }
+
+  .coop-blueprint{
+    background-image:
+      linear-gradient(#d9c9bd 1px, transparent 1px),
+      linear-gradient(90deg, #d9c9bd 1px, transparent 1px);
+    background-size:34px 34px;
+    background-position:center;
+  }
+
+  /* QUÉ ES UNA COOPERADORA / SOBRE LA NUESTRA */
+  .coop-intro{ padding:88px 0 72px; }
+  .coop-intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:64px;
+  }
+  .coop-intro h2{
+    font-size:clamp(1.6rem, 2.6vw, 2.1rem);
+    color:#2a070f;
+    margin:16px 0 18px;
+    letter-spacing:-.01em;
+  }
+  .coop-intro p{
+    font-size:15.5px;
+    color:#5c4a4d;
+    margin-bottom:14px;
+  }
+  .coop-intro p:last-child{ margin-bottom:0; }
+  .coop-intro-block + .coop-intro-block{
+    border-left:1px solid #d9c9bd;
+    padding-left:64px;
+  }
+  @media (max-width:860px){
+    .coop-intro-grid{ grid-template-columns:1fr; }
+    .coop-intro-block + .coop-intro-block{
+      border-left:none;
+      border-top:1px solid #d9c9bd;
+      padding-left:0;
+      padding-top:40px;
+    }
+  }
+
+  /* INTEGRANTES */
+  .coop-integrantes{ padding:72px 0 96px; }
+  .coop-integrantes-head{
+    max-width:640px;
+    margin-bottom:44px;
+  }
+  .coop-integrantes-head h2{
+    font-size:clamp(1.6rem, 2.6vw, 2.1rem);
+    color:#2a070f;
+    margin:16px 0 12px;
+  }
+  .coop-integrantes-head p{
+    color:#5c4a4d;
+    font-size:15.5px;
+  }
+
+  .coop-integrantes-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:#d9c9bd;
+    border:1px solid #d9c9bd;
+    border-radius:12px;
+    overflow:hidden;
+  }
+  .coop-miembro{
+    background:#f6f1ea;
+    padding:26px 24px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+  .coop-miembro .rol{
+    font-family:var(--fuente-informacion);
+    font-size:11px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:#c17a4a;
+  }
+  .coop-miembro .nombre{
+    font-family:var(--fuente-titulos);
+    font-size:17px;
+    font-weight:600;
+    color:#2a070f;
+  }
+  .coop-miembro .desde{
+    font-size:13px;
+    color:#5c4a4d;
+  }
+
+  @media (max-width:960px){
+    .coop-integrantes-grid{ grid-template-columns:repeat(2,1fr); }
+  }
+  @media (max-width:560px){
+    .coop-wrap{ padding:0 20px; }
+    .coop-integrantes-grid{ grid-template-columns:1fr; }
+  }
