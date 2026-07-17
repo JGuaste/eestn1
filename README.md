@@ -22,3 +22,5 @@ Se actualizo: indexmarket, y nav-footer. (Astobiza)
 Se actualiza el nav-footer.css (Guastelli)
 
 index finalizado del market (grupo 2)
+agrege html y css de sentro de estudiantes (franche y lasa)
+
