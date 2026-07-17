@@ -1,0 +1,335 @@
+body {
+    background-image: url("../imagenes/fondoescuela.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.capa-transparentecentro {
+    background-color: rgba(0, 0, 0, 0.77);
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* --- HERO del marketplace --- */
+.centro-hero {
+    text-align: center;
+    padding: 50px 5% 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: aparecer 0.8s ease both;
+}
+
+.centro-hero h1 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 18px;
+    text-shadow: var(--sombra-suave);
+    position: relative;
+    display: inline-block;
+}
+
+.centro-hero h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: var(--color-acento);
+    margin: 14px auto 0;
+    border-radius: 999px;
+    /* La línea crece desde el centro, como una pincelada */
+    animation: crecer-linea 0.6s ease 0.5s both;
+}
+
+@keyframes crecer-linea {
+    from { width: 0; opacity: 0; }
+    to { width: 70px; opacity: 1; }
+}
+
+.centro-hero p {
+    font-family: var(--fuente-informacion);
+    color: #3a3434;
+    background: rgba(255, 255, 255, 0.78);
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin-top: 4px;
+    animation: aparecer 0.8s ease 0.2s both;
+}
+
+/* --- Filtros por categoría --- */
+/* --- Grilla de tarjetas --- */
+.contenedorcentro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 10px 5% 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* backdrop-filter */
+.tarjeta-centro {
+    position: relative;
+    background: var(--color-fondo-tarjeta);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 26px 22px 22px;
+    border-radius: var(--radio-borde);
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion), opacity 0.35s ease;
+    animation: aparecer-tarjeta 0.6s ease both;
+    animation-delay: calc(0.45s + var(--orden, 0) * 0.12s);
+}
+
+@keyframes aparecer-tarjeta {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Estado que usa script.js para esconder/mostrar con una transición suave
+en vez de cortar de golpe con display:none. */
+.tarjeta-producto.oculta {
+    opacity: 0;
+    transform: scale(0.92);
+    pointer-events: none;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-fuerte);
+    border-color: var(--color-acento);
+}
+
+.tarjeta-producto h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem;
+}
+
+.tarjeta-producto p {
+    font-family: var(--fuente-informacion);
+    color: var(--color-texto-suave);
+    font-size: 0.95rem;
+}
+
+/* Etiqueta chica arriba de cada tarjeta */
+.categoria-badge {
+    align-self: center;
+    font-family: var(--fuente-informacion);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 999px;
+    color: #fff;
+}
+
+.categoria-badge[data-categoria="programacion"] { background: var(--color-cat-programacion); }
+.categoria-badge[data-categoria="electromecanica"] { background: var(--color-cat-electromecanica); color: #2b1f00; }
+.categoria-badge[data-categoria="alimentos"] { background: var(--color-cat-alimentos); }
+
+.precio {
+    font-weight: bold;
+    color: var(--color-acento-suave);
+    font-size: 1.3rem;
+    margin: 4px 0;
+}
+
+/* Producto */
+.producto {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Botón de WhatsApp con ícono + texto */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--color-whatsapp);
+    color: white;
+    padding: 11px 18px;
+    text-decoration: none;
+    border-radius: 6px 6px 14px 14px;
+    transition: var(--transicion);
+    border-bottom: 4px solid var(--color-whatsapp-oscuro);
+    font-family: var(--fuente-informacion);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top: auto;
+}
+
+.btn-whatsapp img {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-whatsapp:hover {
+    background: var(--color-whatsapp-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover img {
+    animation: latido 0.6s ease;
+}
+
+@keyframes latido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.btn-whatsapp:active {
+    transform: translateY(0);
+}
+
+/* Estado vacío del filtro (por ejemplo, la categoría Programación) */
+.market-vacio {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 50px 20px;
+    font-family: var(--fuente-informacion);
+    color: var(--color-texto-suave);
+    font-size: 1.1rem;
+}
+
+.queesuncentro{
+    position: relative;
+    background: var(--color-fondo-tarjeta);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 26px 22px 22px;
+    border-radius: var(--radio-borde);
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion), opacity 0.35s ease;
+    animation: aparecer-tarjeta 0.6s ease both;
+    animation-delay: calc(0.45s + var(--orden, 0) * 0.12s);
+    margin: 20px 180px 20px 180px;  
+}
+
+.integrantes{
+      position: relative;
+    background: var(--color-fondo-tarjeta);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 26px 22px 22px;
+    border-radius: var(--radio-borde);
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    border: 1.5px solid rgba(255, 255, 255, 0.681);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion), opacity 0.35s ease;
+    animation: aparecer-tarjeta 0.6s ease both;
+    animation-delay: calc(0.45s + var(--orden, 0) * 0.12s);
+     margin: 20px 180px 20px 180px;  
+}
+
+.integrantes details p{
+   text-align: left;
+
+}
+.carrusel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: #38030c;/*NO LO TOMA*/
+}
+/* La tira que contiene las 4 imágenes en línea */
+.tarjetas {
+  display: flex;
+  width: 400%; /* 4 imágenes = 400% del ancho */
+  height: 100%;
+  
+  /* Aplicamos la animación automática */
+  animation: carrusel-automatico 16s infinite ease-in-out;
+}
+
+/* Cada imagen ocupa el 25% de la tira (el 100% del contenedor visible) */
+.tarjeta {
+  width: 25%;
+  height: 100%;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- LA MAGIA DE LA ANIMACIÓN --- */
+@keyframes carrusel-automatico {
+  /* Imagen 1 (0% al 20% del tiempo total) */
+  0%, 20% {
+    transform: translateX(0%);
+  }
+  
+  /* Transición hacia la Imagen 2 (en el 25% ya llegó) */
+  25%, 45% {
+    transform: translateX(-25%);
+  }
+  
+  /* Transición hacia la Imagen 3 */
+  50%, 70% {
+    transform: translateX(-50%);
+  }
+  
+  /* Transición hacia la Imagen 4 */
+  75%, 95% {
+    transform: translateX(-75%);
+  }
+  
+  /* Vuelve al inicio rápidamente al terminar el ciclo */
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* OPCIONAL: Pausa la animación cuando el usuario pasa el mouse por encima */
+.carrusel:hover .tarjetas {
+  animation-play-state: paused;
+}
+
+
+
+
+
