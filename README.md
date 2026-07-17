@@ -27,4 +27,4 @@ agrege html y css de sentro de estudiantes (franche y lasa)
 Se agrtego la pagina de cooperadora escolar con su respectivo coop.css (Astobiza fran - grupo 2)
 
 Agregue los html modificados de alimentos y electro, historia, programacion, tambien el CSS de ellos, imagenes que fueron utilizadas (CHIARA )
-
+subimos el html de noticia medicado las taarjetas,mas subidas de las imagenes de cada tarjeta,(fio,alan)
