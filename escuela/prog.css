@@ -1,0 +1,274 @@
+
+/*.fondo-main{
+background-image: url("/imagenes/fondo.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 350px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-size: 2rem;
+}/*
+
+/* Animación de entrada */
+ html{
+  scroll-behavior: smooth;
+ }
+body {
+ 
+    animation: aparecer 1.5s ease;
+     
+    background-color: #ffe9e18f;
+}
+/* Botón redondo */
+.boton-redondo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #5c1104;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+
+  
+  /* Centrado básico en pantalla (opcional) */
+  margin: 20px auto; 
+}
+
+.boton-redondo:hover {
+  background-color: #e6e1a5;
+  transform: scale(1.1);
+}
+
+/* Encabezado */
+.fondo-main {
+  
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: linear-gradient(-45deg, #0f2a0f, #0f6831, #10b834, #0f2a0f);
+    background-size: 400% 400%;
+    animation: fondoMovimiento 10s ease infinite;
+    font-size: 45px;
+    color: white;
+    
+}
+.fondoProgramacion{
+ background-image:  url(/imagenes/fondoprogram.png);
+
+}
+  .textoInfo p{
+   
+    text-decoration-color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family:var(--fuente-informacion);
+   width: 850px;
+   text-align: justify;
+   margin:0 auto; 
+  }
+  p{
+      font-family:var(--fuente-informacion);
+   font-size: 20px;
+   color:rgb(5, 0, 0);
+    margin: 70px;
+  }
+.InfModalidad h1{
+  color:rgb(0, 0, 0);
+
+  display: flexbox;
+
+text-align: center;
+}
+/* Título */
+ .fondo-main h1 {
+  font-family: var(--fuente-informacion);
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+h2{
+  color:rgb(0, 0, 0);
+text-align: center;
+
+
+}
+h3{
+  margin:15px;
+}
+
+
+/*HISTORIA*/
+ .fondo-historia{
+ 
+  background-image:
+
+   linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+   url(/imagenes/probarfondohistoria.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 250px 20px;
+    text-align: center;
+    font-family: var(--fuente-titulos);
+  
+
+}
+.fondo-historia h1{
+  font-size: 80px;
+
+}
+.fondoParaHis{
+  background-image: url(/imagenes/fondogeneral.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.imagenes img{
+  width: 400px;
+float: right ;
+margin-top: 6px;
+}
+.fondoAlimentos{
+  background-image: url(/imagenes/alimentosfondo.png);
+}
+
+.TextoInicioHistoria p{
+  font-family:var(--fuente-informacion);
+    text-align: center;
+   color:rgb(255, 255, 255);
+    padding:30px;
+    font-size: 30px;
+
+}
+/*TARJETAS*/
+.contenedor2 { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    padding: 40px 5%; 
+}
+
+
+.tarjeta-1 {
+    background: white;
+    padding: 35px;
+    border-top: 5px solid #2e7d32;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.tarjeta-1 p{
+   margin:15px;
+
+}
+.contenedor2 .tarjeta-1 .Imagen-practica img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.contenedor{
+ 
+  display:flex;
+  flex-direction: column;
+   justify-content: center;
+   align-items: stretch;
+  
+      
+}
+
+/* Movimiento del fondo */
+@keyframes fondoMovimiento {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Aparición de la página */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Contenedor principal */
+.carrusel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: #38030c;/*NO LO TOMA*/
+}
+
+/* La tira que contiene las 4 imágenes en línea */
+.tarjetas {
+  display: flex;
+  width: 400%; /* 4 imágenes = 400% del ancho */
+  height: 100%;
+  
+  /* Aplicamos la animación automática */
+  animation: carrusel-automatico 16s infinite ease-in-out;
+}
+
+/* Cada imagen ocupa el 25% de la tira (el 100% del contenedor visible) */
+.tarjeta {
+  width: 25%;
+  height: 100%;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- LA MAGIA DE LA ANIMACIÓN --- */
+@keyframes carrusel-automatico {
+  /* Imagen 1 (0% al 20% del tiempo total) */
+  0%, 20% {
+    transform: translateX(0%);
+  }
+  
+  /* Transición hacia la Imagen 2 (en el 25% ya llegó) */
+  25%, 45% {
+    transform: translateX(-25%);
+  }
+  
+  /* Transición hacia la Imagen 3 */
+  50%, 70% {
+    transform: translateX(-50%);
+  }
+  
+  /* Transición hacia la Imagen 4 */
+  75%, 95% {
+    transform: translateX(-75%);
+  }
+  
+  /* Vuelve al inicio rápidamente al terminar el ciclo */
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* OPCIONAL: Pausa la animación cuando el usuario pasa el mouse por encima */
+.carrusel:hover .tarjetas {
+  animation-play-state: paused;
+}
