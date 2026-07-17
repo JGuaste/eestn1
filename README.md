@@ -23,5 +23,7 @@ Se actualiza el nav-footer.css (Guastelli)
 
 index finalizado del market (grupo 2)
 agrege html y css de sentro de estudiantes (franche y lasa)
+
+
 Agregue los html modificados de alimentos y electro, historia, programacion, tambien el CSS de ellos, imagenes que fueron utilizadas (CHIARA )
 
