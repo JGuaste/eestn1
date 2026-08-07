@@ -26,22 +26,25 @@ body{
 }
 
 .tarjeta-info {
-    background:   #a31e1efd;
+    background:    #7a0f0f;
     padding: 30px;
-    border-top: 5px solid #e0de5ae0;
-    border-radius: 5px;
+    border-top: 10px solid #4a0808;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.575);
 
+
 }
-.imagen_noticias{
-    display: block;
-    height: 210px;
+.imagen-tarjeta{
+  display: block;
+  max-width: 100%;
+  height: auto;     
+  align-items: flex-start;
+ 
 }
-.imagen{
+.imagen-tarjeta img{
     display: block;
     justify-content: center;
-    padding: 10px;
-    margin: 15px;
+    max-width: 100%;
 }
 
 
