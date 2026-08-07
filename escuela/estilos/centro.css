@@ -256,7 +256,8 @@ en vez de cortar de golpe con display:none. */
     transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion), opacity 0.35s ease;
     animation: aparecer-tarjeta 0.6s ease both;
     animation-delay: calc(0.45s + var(--orden, 0) * 0.12s);
-     margin: 20px 180px 20px 180px;  
+    margin: 20px 180px 20px 180px;
+    
 }
 
 .integrantes details p{
