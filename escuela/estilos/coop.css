@@ -3,12 +3,11 @@
     width: 100%;
     height: 400px;
     display: flex;
-    background: linear-gradient(135deg, #2e0707 0%, #971010 100%);
+    background: radial-gradient(circle,rgba(156, 0, 0, 1) 0%, rgba(71, 0, 0, 1) 100%);
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    overflow: hidden;
 }
 
 /* Animación del texto (se desliza desde abajo y aparece) */
@@ -17,6 +16,7 @@
     opacity: 0;
     margin-bottom: 10px;
     font-size: 3rem;
+    font-family: var(--fuente-titulos);
 }
 
 
@@ -71,11 +71,12 @@
   }
 
   .coop-blueprint{
-    background-image:
-      linear-gradient(#d9c9bd 1px, transparent 1px),
-      linear-gradient(90deg, #d9c9bd 1px, transparent 1px);
-    background-size:34px 34px;
-    background-position:center;
+    background-image: url("../imagenes/fondo-coop.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
   }
 
   /* QUÉ ES UNA COOPERADORA / SOBRE LA NUESTRA */
@@ -148,7 +149,7 @@
     font-size:11px;
     letter-spacing:.06em;
     text-transform:uppercase;
-    color:#c17a4a;
+    color:#c14a4a;
   }
   .coop-miembro .nombre{
     font-family:var(--fuente-titulos);
@@ -168,3 +169,90 @@
     .coop-wrap{ padding:0 20px; }
     .coop-integrantes-grid{ grid-template-columns:1fr; }
   }
+
+  
+  /*--VER INTEGRANTES--*/
+  /* --- Estilos para el botón "Ver integrantes" (summary) --- */
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+/* Oculta la flecha nativa del navegador */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:hover {
+  background-color: #f9fafb;
+}
+
+/* Icono dinámico +/- con rotación */
+summary::after {
+  content: '+';
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #2563eb;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+details[open] summary::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+
+/* --- Animación de entrada para el párrafo --- */
+details p {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+details[open] p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@starting-style {
+  details[open] p {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+/* --- Animación en cascada (Stagger) para las tarjetas de la grilla --- */
+.coop-miembro {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+details[open] .coop-miembro {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@starting-style {
+  details[open] .coop-miembro {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+/* Secuencia de tiempo de entrada para cada integrante */
+details[open] .coop-miembro:nth-child(1) { transition-delay: 0.04s; }
+details[open] .coop-miembro:nth-child(2) { transition-delay: 0.08s; }
+details[open] .coop-miembro:nth-child(3) { transition-delay: 0.12s; }
+details[open] .coop-miembro:nth-child(4) { transition-delay: 0.16s; }
+details[open] .coop-miembro:nth-child(5) { transition-delay: 0.20s; }
+details[open] .coop-miembro:nth-child(6) { transition-delay: 0.24s; }
+details[open] .coop-miembro:nth-child(7) { transition-delay: 0.28s; }
+details[open] .coop-miembro:nth-child(8) { transition-delay: 0.32s; }
+details[open] .coop-miembro:nth-child(9) { transition-delay: 0.36s; }
