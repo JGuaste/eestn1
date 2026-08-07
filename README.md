@@ -28,3 +28,5 @@ Se agrtego la pagina de cooperadora escolar con su respectivo coop.css (Astobiza
 
 Agregue los html modificados de alimentos y electro, historia, programacion, tambien el CSS de ellos, imagenes que fueron utilizadas (CHIARA )
 subimos el html de noticia medicado las taarjetas,mas subidas de las imagenes de cada tarjeta,(fio,alan)
+
+Se actualizo indexCoop.html, coop.css y se agrego una imagen en imagenes (Astobiza y Ferrari en singular(Grupo 2))
