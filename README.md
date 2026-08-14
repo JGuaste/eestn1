@@ -32,3 +32,5 @@ subimos el html de noticia medicado las taarjetas,mas subidas de las imagenes de
 Se actualizo indexCoop.html, coop.css y se agrego una imagen en imagenes (Astobiza y Ferrari en singular(Grupo 2))
 se actualizo el index(alan)
 se actualizo el index,estilo, imagen
+
+Se agrego txt de anotaciones donde se encuentra todo lo que hay que mejorar (Guastelli)
