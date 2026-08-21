@@ -34,3 +34,5 @@ se actualizo el index(alan)
 se actualizo el index,estilo, imagen
 
 Se agrego txt de anotaciones donde se encuentra todo lo que hay que mejorar (Guastelli)
+
+Elimine: las paginas de electro,programacion,alimentos y el css prog, pero SE AGREGO: las 3 paginas de las mod y sus respectivos css mas el de historia: CHIARA vargas
