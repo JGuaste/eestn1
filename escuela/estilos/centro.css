@@ -1,3 +1,23 @@
+/* Estilos base del banner */
+.banner-contenedor {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    background: radial-gradient(circle,rgba(156, 0, 0, 1) 0%, rgba(71, 0, 0, 1) 100%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Animación del texto (se desliza desde abajo y aparece) */
+.banner-contenedor .banner-contenido h1 {
+    animation: deslizarArriba 1.5s ease-out forwards;
+    opacity: 0;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    font-family: var(--fuente-titulos);
+}
 body {
     background-image: url("../imagenes/fondoescuela.png");
     background-size: cover;
@@ -221,6 +241,13 @@ en vez de cortar de golpe con display:none. */
     font-size: 1.1rem;
 }
 
+.baner{
+background: radial-gradient(red,rgb(123, 16, 16));
+
+text-align: center;
+font-size:50px;
+
+}
 .queesuncentro{
     position: relative;
     background: var(--color-fondo-tarjeta);
@@ -230,40 +257,18 @@ en vez de cortar de golpe con display:none. */
     border-radius: var(--radio-borde);
     text-align: center;
     box-shadow: var(--sombra-suave);
-    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    border: 1.5px solid rgba(255, 255, 255, 0.203);
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion), opacity 0.35s ease;
     animation: aparecer-tarjeta 0.6s ease both;
     animation-delay: calc(0.45s + var(--orden, 0) * 0.12s);
-    margin: 20px 180px 20px 180px;  
+    margin:5%;  
 }
 
-.integrantes{
-      position: relative;
-    background: var(--color-fondo-tarjeta);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 26px 22px 22px;
-    border-radius: var(--radio-borde);
-    text-align: center;
-    box-shadow: var(--sombra-suave);
-    border: 1.5px solid rgba(255, 255, 255, 0.681);
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion), opacity 0.35s ease;
-    animation: aparecer-tarjeta 0.6s ease both;
-    animation-delay: calc(0.45s + var(--orden, 0) * 0.12s);
-    margin: 20px 180px 20px 180px;
-    
-}
 
-.integrantes details p{
-   text-align: left;
 
-}
 .carrusel {
   position: relative;
   width: 100%;
@@ -273,7 +278,6 @@ en vez de cortar de golpe con display:none. */
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  background-color: #38030c;/*NO LO TOMA*/
 }
 /* La tira que contiene las 4 imágenes en línea */
 .tarjetas {
@@ -330,7 +334,165 @@ en vez de cortar de golpe con display:none. */
   animation-play-state: paused;
 }
 
+coop-eyebrow{
+    font-family:var(--fuente-titulos);
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#c17a4a;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .coop-eyebrow::before{
+    content:"";
+    width:22px; height:1px;
+    background:#c17a4a;
+  }
+/* INTEGRANTES */
+  .coop-integrantes{ padding:72px 0 96px; }
+  .coop-integrantes-head{
+    max-width:640px;
+    margin-bottom:44px;
+  }
+  .coop-integrantes-head h2{
+    font-size:clamp(1.6rem, 2.6vw, 2.1rem);
+    color:#2a070f;
+    margin:16px 0 12px;
+  }
+  .coop-integrantes-head p{
+    color:#5c4a4d;
+    font-size:15.5px;
+  }
 
+  .coop-integrantes-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:#d9c9bd;
+    border:1px solid #d9c9bd;
+    border-radius:12px;
+    overflow:hidden;
+  }
+  .coop-miembro{
+    background:#f6f1ea;
+    padding:26px 24px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+  .coop-miembro .rol{
+    font-family:var(--fuente-informacion);
+    font-size:11px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:#c14a4a;
+  }
+  .coop-miembro .nombre{
+    font-family:var(--fuente-titulos);
+    font-size:17px;
+    font-weight:600;
+    color:#2a070f;
+  }
+  .coop-miembro .desde{
+    font-size:13px;
+    color:#5c4a4d;
+  }
+
+  @media (max-width:960px){
+    .coop-integrantes-grid{ grid-template-columns:repeat(2,1fr); }
+  }
+  @media (max-width:560px){
+    .coop-wrap{ padding:0 20px; }
+    .coop-integrantes-grid{ grid-template-columns:1fr; }
+  }
+
+  
+  /*--VER INTEGRANTES--*/
+  /* --- Estilos para el botón "Ver integrantes" (summary) --- */
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+/* Oculta la flecha nativa del navegador */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:hover {
+  background-color: #f9fafb;
+}
+
+/* Icono dinámico +/- con rotación */
+summary::after {
+  content: '+';
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #2563eb;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+details[open] summary::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+
+/* --- Animación de entrada para el párrafo --- */
+details p {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+details[open] p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@starting-style {
+  details[open] p {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+/* --- Animación en cascada (Stagger) para las tarjetas de la grilla --- */
+.coop-miembro {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+details[open] .coop-miembro {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@starting-style {
+  details[open] .coop-miembro {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+/* Secuencia de tiempo de entrada para cada integrante */
+details[open] .coop-miembro:nth-child(1) { transition-delay: 0.04s; }
+details[open] .coop-miembro:nth-child(2) { transition-delay: 0.08s; }
+details[open] .coop-miembro:nth-child(3) { transition-delay: 0.12s; }
+details[open] .coop-miembro:nth-child(4) { transition-delay: 0.16s; }
+details[open] .coop-miembro:nth-child(5) { transition-delay: 0.20s; }
+details[open] .coop-miembro:nth-child(6) { transition-delay: 0.24s; }
+details[open] .coop-miembro:nth-child(7) { transition-delay: 0.28s; }
+details[open] .coop-miembro:nth-child(8) { transition-delay: 0.32s; }
+details[open] .coop-miembro:nth-child(9) { transition-delay: 0.36s; }
 
 
 
