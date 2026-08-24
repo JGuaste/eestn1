@@ -33,7 +33,7 @@ body{
   font-size: 24px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   margin: 20px auto; 
-  transition:  transform 0.2s  0.3s ease-in-out;
+  transition:  transform 0.1s  0.5s ease-in-out;
 }
 
 .boton-redondo:hover {
@@ -114,7 +114,7 @@ h2 {
     
 }
 
-p{
+section p{
     color: black;
 }
 .noticia-tarjeta h4 {
