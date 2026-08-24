@@ -11,9 +11,9 @@
 }
 
 /* Animación del texto (se desliza desde abajo y aparece) */
-.banner-contenedor .banner-contenido h1 {
+.banner-contenido h1 {
     animation: deslizarArriba 1.5s ease-out forwards;
-    opacity: 0;
+    opacity: 1;
     margin-bottom: 10px;
     font-size: 3rem;
     font-family: var(--fuente-titulos);
@@ -250,7 +250,7 @@ font-size:50px;
 }
 .queesuncentro{
     position: relative;
-    background: var(--color-fondo-tarjeta);
+    background:#f6f1ea;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 26px 22px 22px;
@@ -265,6 +265,8 @@ font-size:50px;
     animation: aparecer-tarjeta 0.6s ease both;
     animation-delay: calc(0.45s + var(--orden, 0) * 0.12s);
     margin:5%;  
+    font-family: var(--fuente-titulo);
+    color:var(--color-menu-claro);
 }
 
 
@@ -428,7 +430,7 @@ summary::-webkit-details-marker {
 }
 
 summary:hover {
-  background-color: #f9fafb;
+  background-color: #f3c2a1;
 }
 
 /* Icono dinámico +/- con rotación */
