@@ -19,7 +19,7 @@ display: block;
 
 }
 
-p {
+main p {
     max-width: 100%;
 font-family: var(--fuente-informacion);
 font-size: 15.5px;
