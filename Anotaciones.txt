@@ -1,0 +1,120 @@
+Barra de navegación: sacar página de contacto, agregar enlace a centro de estudiantes. 
+
+Index: Sacar de Index esto " <div class="linea"></div>
+            <li><a href="indexmarket.html" aria-current="page">Marketplace</a></li>
+            <div class="linea"></div> " (probar como queda).
+
+Cambiar imagen (fondoH), ver que el nombre de la escuela quede un poco mas abajo, y el titulo principal (tal vez mas grande) y el fondo mas oscuro. Evaluar la opción de un carrousel de imágenes.
+
+Tarjetas de historia con enlace a la página de historia
+Otra tarjeta con las modalidades
+VEr como queda una de noticias.
+
+Ver color de las tarjetas (aplicar transparencias)
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Página programación:
+
+Barra de navegación:
+modificar esto: 
+
+
+	" <div class="linea"></div>
+            <li><a href="indexmarket.html" aria-current="page">Marketplace</a></li>
+            <div class="linea"></div> "
+
+Copiar el código HTML. (header y footer)
+Ver las fuentes
+Ver cantidad y disposición de información.
+Ver el banner (imagen??)
+Ver márgenes
+Respon		
+footer
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Página Electro:
+
+Barra de navegación:
+modificar esto: 
+
+
+	" <div class="linea"></div>
+            <li><a href="indexmarket.html" aria-current="page">Marketplace</a></li>
+            <div class="linea"></div> "
+
+Copiar el código HTML. (header y footer)
+
+Ver cantidad de información
+Agregar fotos
+Alinear imagen en tarjeta
+fuentes
+Respons
+footer
+------------------------------------------------------------------------------------------------------------------------------------------
+Página Alimentos
+
+Barra de navegación:
+modificar esto: 
+
+
+	" <div class="linea"></div>
+            <li><a href="indexmarket.html" aria-current="page">Marketplace</a></li>
+            <div class="linea"></div> "
+
+Copiar el código HTML. (header y footer)
+
+Ver cantidad de información
+Agregar fotos
+Alinear imagen en tarjeta
+fuentes
+Respons
+Ver fondo
+footer
+------------------------------------------------------------------------------------------------------------------------------------------
+Página Historia
+Barra de navegación:
+modificar esto: 
+
+
+	" <div class="linea"></div>
+            <li><a href="historia.html" aria-current="page">Historia</a></li>
+            <div class="linea"></div> "
+
+Ver fuentes
+Sacar tarjeta que dice noticias
+Poner footer
+respons
+------------------------------------------------------------------------------------------------------------------------------------------
+Página cooperadora
+
+completar integrantes
+enlaces de barra de navegación
+
+------------------------------------------------------------------------------------------------------------------------------------------
+Página centro de estudiantes
+
+barra de navegación (mantener el nombre de la escuela EESTN°1)
+Agregar banner
+modificar color
+ver background en el body (no tiene fondo)
+ver la lista de integrantes
+
+Ver el carrusel
+
+------------------------------------------------------------------------------------------------------------------------------------------
+Página de noticias
+
+falta
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Market
+
+ver de sacar el fondo oscuro
+ver donde pueden llegar los mensajes de pedidos
+ver el color de fondo de las tarjetas
+ver transiciones de filtros (más rápido)
+achicar tarjeta de electromecánica
+agregar pedidos por encargue
+
