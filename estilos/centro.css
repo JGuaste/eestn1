@@ -1,0 +1,500 @@
+/* Estilos base del banner */
+.banner-contenedor {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    background: radial-gradient(circle,rgba(156, 0, 0, 1) 0%, rgba(71, 0, 0, 1) 100%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Animación del texto (se desliza desde abajo y aparece) */
+.banner-contenido h1 {
+    animation: deslizarArriba 1.5s ease-out forwards;
+    opacity: 1;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    font-family: var(--fuente-titulos);
+}
+body {
+    background-image: url("../imagenes/fondoescuela.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.capa-transparentecentro {
+    background-color: rgba(0, 0, 0, 0.77);
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* --- HERO del marketplace --- */
+.centro-hero {
+    text-align: center;
+    padding: 50px 5% 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: aparecer 0.8s ease both;
+}
+
+.centro-hero h1 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 18px;
+    text-shadow: var(--sombra-suave);
+    position: relative;
+    display: inline-block;
+}
+
+.centro-hero h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: var(--color-acento);
+    margin: 14px auto 0;
+    border-radius: 999px;
+    /* La línea crece desde el centro, como una pincelada */
+    animation: crecer-linea 0.6s ease 0.5s both;
+}
+
+@keyframes crecer-linea {
+    from { width: 0; opacity: 0; }
+    to { width: 70px; opacity: 1; }
+}
+
+.centro-hero p {
+    font-family: var(--fuente-informacion);
+    color: #3a3434;
+    background: rgba(255, 255, 255, 0.78);
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin-top: 4px;
+    animation: aparecer 0.8s ease 0.2s both;
+}
+
+/* --- Filtros por categoría --- */
+/* --- Grilla de tarjetas --- */
+.contenedorcentro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 10px 5% 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* backdrop-filter */
+.tarjeta-centro {
+    position: relative;
+    background: var(--color-fondo-tarjeta);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 26px 22px 22px;
+    border-radius: var(--radio-borde);
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion), opacity 0.35s ease;
+    animation: aparecer-tarjeta 0.6s ease both;
+    animation-delay: calc(0.45s + var(--orden, 0) * 0.12s);
+}
+
+@keyframes aparecer-tarjeta {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Estado que usa script.js para esconder/mostrar con una transición suave
+en vez de cortar de golpe con display:none. */
+.tarjeta-producto.oculta {
+    opacity: 0;
+    transform: scale(0.92);
+    pointer-events: none;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-fuerte);
+    border-color: var(--color-acento);
+}
+
+.tarjeta-producto h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem;
+}
+
+.tarjeta-producto p {
+    font-family: var(--fuente-informacion);
+    color: var(--color-texto-suave);
+    font-size: 0.95rem;
+}
+
+/* Etiqueta chica arriba de cada tarjeta */
+.categoria-badge {
+    align-self: center;
+    font-family: var(--fuente-informacion);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 999px;
+    color: #fff;
+}
+
+.categoria-badge[data-categoria="programacion"] { background: var(--color-cat-programacion); }
+.categoria-badge[data-categoria="electromecanica"] { background: var(--color-cat-electromecanica); color: #2b1f00; }
+.categoria-badge[data-categoria="alimentos"] { background: var(--color-cat-alimentos); }
+
+.precio {
+    font-weight: bold;
+    color: var(--color-acento-suave);
+    font-size: 1.3rem;
+    margin: 4px 0;
+}
+
+/* Producto */
+.producto {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Botón de WhatsApp con ícono + texto */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--color-whatsapp);
+    color: white;
+    padding: 11px 18px;
+    text-decoration: none;
+    border-radius: 6px 6px 14px 14px;
+    transition: var(--transicion);
+    border-bottom: 4px solid var(--color-whatsapp-oscuro);
+    font-family: var(--fuente-informacion);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top: auto;
+}
+
+.btn-whatsapp img {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-whatsapp:hover {
+    background: var(--color-whatsapp-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover img {
+    animation: latido 0.6s ease;
+}
+
+@keyframes latido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.btn-whatsapp:active {
+    transform: translateY(0);
+}
+
+/* Estado vacío del filtro (por ejemplo, la categoría Programación) */
+.market-vacio {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 50px 20px;
+    font-family: var(--fuente-informacion);
+    color: var(--color-texto-suave);
+    font-size: 1.1rem;
+}
+
+.baner{
+background: radial-gradient(red,rgb(123, 16, 16));
+
+text-align: center;
+font-size:50px;
+
+}
+.queesuncentro{
+    position: relative;
+    background:#f6f1ea;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 26px 22px 22px;
+    border-radius: var(--radio-borde);
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    border: 1.5px solid rgba(255, 255, 255, 0.203);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion), opacity 0.35s ease;
+    animation: aparecer-tarjeta 0.6s ease both;
+    animation-delay: calc(0.45s + var(--orden, 0) * 0.12s);
+    margin:5%;  
+    font-family: var(--fuente-titulo);
+    color:var(--color-menu-claro);
+}
+
+
+
+.carrusel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+/* La tira que contiene las 4 imágenes en línea */
+.tarjetas {
+  display: flex;
+  width: 400%; /* 4 imágenes = 400% del ancho */
+  height: 100%;
+  
+  /* Aplicamos la animación automática */
+  animation: carrusel-automatico 16s infinite ease-in-out;
+}
+
+/* Cada imagen ocupa el 25% de la tira (el 100% del contenedor visible) */
+.tarjeta {
+  width: 25%;
+  height: 100%;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- LA MAGIA DE LA ANIMACIÓN --- */
+@keyframes carrusel-automatico {
+  /* Imagen 1 (0% al 20% del tiempo total) */
+  0%, 20% {
+    transform: translateX(0%);
+  }
+  
+  /* Transición hacia la Imagen 2 (en el 25% ya llegó) */
+  25%, 45% {
+    transform: translateX(-25%);
+  }
+  
+  /* Transición hacia la Imagen 3 */
+  50%, 70% {
+    transform: translateX(-50%);
+  }
+  
+  /* Transición hacia la Imagen 4 */
+  75%, 95% {
+    transform: translateX(-75%);
+  }
+  
+  /* Vuelve al inicio rápidamente al terminar el ciclo */
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* OPCIONAL: Pausa la animación cuando el usuario pasa el mouse por encima */
+.carrusel:hover .tarjetas {
+  animation-play-state: paused;
+}
+
+coop-eyebrow{
+    font-family:var(--fuente-titulos);
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#c17a4a;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .coop-eyebrow::before{
+    content:"";
+    width:22px; height:1px;
+    background:#c17a4a;
+  }
+/* INTEGRANTES */
+  .coop-integrantes{ padding:72px 0 96px; }
+  .coop-integrantes-head{
+    max-width:640px;
+    margin-bottom:44px;
+  }
+  .coop-integrantes-head h2{
+    font-size:clamp(1.6rem, 2.6vw, 2.1rem);
+    color:#2a070f;
+    margin:16px 0 12px;
+  }
+  .coop-integrantes-head p{
+    color:#5c4a4d;
+    font-size:15.5px;
+  }
+
+  .coop-integrantes-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:#d9c9bd;
+    border:1px solid #d9c9bd;
+    border-radius:12px;
+    overflow:hidden;
+  }
+  .coop-miembro{
+    background:#f6f1ea;
+    padding:26px 24px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+  .coop-miembro .rol{
+    font-family:var(--fuente-informacion);
+    font-size:11px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:#c14a4a;
+  }
+  .coop-miembro .nombre{
+    font-family:var(--fuente-titulos);
+    font-size:17px;
+    font-weight:600;
+    color:#2a070f;
+  }
+  .coop-miembro .desde{
+    font-size:13px;
+    color:#5c4a4d;
+  }
+
+  @media (max-width:960px){
+    .coop-integrantes-grid{ grid-template-columns:repeat(2,1fr); }
+  }
+  @media (max-width:560px){
+    .coop-wrap{ padding:0 20px; }
+    .coop-integrantes-grid{ grid-template-columns:1fr; }
+  }
+
+  
+  /*--VER INTEGRANTES--*/
+  /* --- Estilos para el botón "Ver integrantes" (summary) --- */
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+/* Oculta la flecha nativa del navegador */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:hover {
+  background-color: #f3c2a1;
+}
+
+/* Icono dinámico +/- con rotación */
+summary::after {
+  content: '+';
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #2563eb;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+details[open] summary::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+
+/* --- Animación de entrada para el párrafo --- */
+details p {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+details[open] p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@starting-style {
+  details[open] p {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+/* --- Animación en cascada (Stagger) para las tarjetas de la grilla --- */
+.coop-miembro {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+details[open] .coop-miembro {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@starting-style {
+  details[open] .coop-miembro {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+/* Secuencia de tiempo de entrada para cada integrante */
+details[open] .coop-miembro:nth-child(1) { transition-delay: 0.04s; }
+details[open] .coop-miembro:nth-child(2) { transition-delay: 0.08s; }
+details[open] .coop-miembro:nth-child(3) { transition-delay: 0.12s; }
+details[open] .coop-miembro:nth-child(4) { transition-delay: 0.16s; }
+details[open] .coop-miembro:nth-child(5) { transition-delay: 0.20s; }
+details[open] .coop-miembro:nth-child(6) { transition-delay: 0.24s; }
+details[open] .coop-miembro:nth-child(7) { transition-delay: 0.28s; }
+details[open] .coop-miembro:nth-child(8) { transition-delay: 0.32s; }
+details[open] .coop-miembro:nth-child(9) { transition-delay: 0.36s; }
+
+
+
