@@ -38,3 +38,5 @@ Se agrego txt de anotaciones donde se encuentra todo lo que hay que mejorar (Gua
 Elimine: las paginas de electro,programacion,alimentos y el css prog, pero SE AGREGO: las 3 paginas de las mod y sus respectivos css mas el de historia: CHIARA vargas
 
 Se actualizo: Noticias.html, Noticias.css y se agrego: JavascriptNoticias(Contiene todo);. Francisco astobiza grupo 2
+
+Se sacaron los archivos del repositorio afuera (se mantuvo repositorio "viejo") con el motivo de preparar el entorno para hacer funcionar GitHub Pages. (Guastelli)
