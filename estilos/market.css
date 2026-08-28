@@ -1,5 +1,5 @@
 body {
-    background-image: url("../imagenes/fondoescuela.png");
+    background-image: url("../imagenes/fondogeneral.png");
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -7,7 +7,7 @@ body {
 }
 
 .capa-transparente {
-    background-color: rgba(0, 0, 0, 0.432);
+    background-color: rgba(0, 0, 0, 0.473);
     min-height: 100vh;
     width: 100%;
     color: white;
@@ -41,13 +41,12 @@ body {
     background: var(--color-acento);
     margin: 14px auto 0;
     border-radius: 999px;
-    /* La línea crece desde el centro, como una pincelada */
     animation: crecer-linea 0.6s ease 0.5s both;
 }
 
 @keyframes crecer-linea {
     from { width: 0; opacity: 0; }
-    to { width: 70px; opacity: 1; }
+    to { width: 320px; opacity: 1; }
 }
 
 
@@ -113,6 +112,13 @@ body {
     transform: scale(0.95);
 }
 
+
+@media (max-width: 768px) {
+  .filtro-chip {
+    width: 150px;
+  }
+}
+
 @keyframes pulso-chip {
     0% { transform: scale(1); }
     50% { transform: scale(1.08); }
@@ -143,7 +149,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion), opacity 0.35s ease;
+    transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion), opacity 0.12s ease;
     animation: aparecer-tarjeta 0.6s ease both;
     animation-delay: calc(0.45s + var(--orden, 0) * 0.12s);
 }
@@ -159,8 +165,7 @@ body {
     }
 }
 
-/* Estado que usa script.js para esconder/mostrar con una transición suave
-en vez de cortar de golpe con display:none. */
+/* Estado que usa script.js para esconder/mostrar.*/
 .tarjeta-producto.oculta {
     opacity: 0;
     transform: scale(0.92);
@@ -182,9 +187,14 @@ en vez de cortar de golpe con display:none. */
     font-family: var(--fuente-informacion);
     color: var(--color-texto-suave);
     font-size: 0.95rem;
+    text-align: center;
+    margin: 5px 0 5px 0;
 }
 
-/* Etiqueta chica arriba de cada tarjeta */
+/* =========================================
+   ETIQUETA CATEGORIA ARRIBA DE CADA TARJETA
+========================================= */
+
 .categoria-badge {
     align-self: center;
     font-family: var(--fuente-informacion);
@@ -208,7 +218,10 @@ en vez de cortar de golpe con display:none. */
     margin: 4px 0;
 }
 
-/* Producto */
+/* =========================================
+   PRODUCTO
+========================================= */
+
 .producto {
     width: 220px;
     height: 200px;
@@ -225,7 +238,10 @@ en vez de cortar de golpe con display:none. */
 
 }
 
-/* Botón de WhatsApp con ícono + texto */
+/* =========================================
+   BOTON WHATSAPP CON ÍCONO + TEXTO
+========================================= */
+
 .btn-whatsapp {
     display: inline-flex;
     align-items: center;
@@ -268,7 +284,10 @@ en vez de cortar de golpe con display:none. */
     transform: translateY(0);
 }
 
-/* Estado vacío del filtro (por ejemplo, la categoría Programación) */
+/* =========================================
+   ESTADO VACIO DEL FILTRO(PROGRAMACIÓN)
+========================================= */
+
 .market-vacio {
     text-align: center;
     grid-column: 1 / -1;
