@@ -1,10 +1,9 @@
-// --- MENÚ MÓVIL ---
+// --- MENÚ RESPONSIVO ---
+
 // Buscamos en el documento los elementos que necesitamos:
-// el botón de las 3 rayitas (menu-respon) y la lista de enlaces (nav-menu).
 let boton = document.getElementById('menu-respon');
 let menu = document.getElementById('nav-menu');
 
-// Le decimos al botón: "quedate atento y esperá un click del usuario".
 // () => { ... } es una función flecha: "cuando ocurra el click, ejecutá esto".
 boton.addEventListener('click', () => {
     // classList es la lista de clases CSS del elemento.
@@ -50,13 +49,8 @@ submenus.forEach((submenu) => {
     });
 });
 
-// --- FILTRO DE CATEGORÍAS DEL MARKETPLACE (cambio casi instantáneo) ---
-// Cada chip de filtro tiene un atributo data-categoria ("todos",
-// "programacion", "electromecanica" o "alimentos") y cada tarjeta de
-// producto tiene ese mismo dato en su propio data-categoria.
-// Las tarjetas que no coinciden salen del flujo de inmediato (sin esperar
-// a que termine ninguna animación); las que quedan hacen apenas un fade
-// cortito para no verse un corte totalmente seco.
+
+// --- FILTRO DE CATEGORÍAS DEL MARKETPLACE
 const chips = document.querySelectorAll('.filtro-chip');
 const tarjetas = document.querySelectorAll('.tarjeta-producto');
 const mensajeVacio = document.getElementById('market-vacio');
@@ -65,8 +59,8 @@ chips.forEach((chip) => {
     chip.addEventListener('click', () => {
         const categoriaElegida = chip.dataset.categoria;
 
+        
         // Marcamos visualmente cuál chip está activo (aria-pressed además
-        // ayuda a lectores de pantalla a entender el estado del filtro).
         chips.forEach((c) => c.setAttribute('aria-pressed', 'false'));
         chip.setAttribute('aria-pressed', 'true');
 
@@ -80,14 +74,14 @@ chips.forEach((chip) => {
             if (coincide) {
                 visibles++;
                 tarjeta.style.display = 'flex';
-                // Forzamos un reflow para que el navegador "registre" el
+
                 // display:flex antes de sacar la clase oculta y así el
                 // fade cortito se note (si no, salta sin animar).
                 void tarjeta.offsetWidth;
                 tarjeta.classList.remove('oculta');
             } else {
                 tarjeta.classList.add('oculta');
-                tarjeta.style.display = 'none'; // sale del flujo YA, sin esperar
+                tarjeta.style.display = 'none';
             }
         });
 
@@ -111,7 +105,7 @@ if ('IntersectionObserver' in window && elementosReveal.length) {
             entradas.forEach((entrada) => {
                 if (entrada.isIntersecting) {
                     entrada.target.classList.add('visible');
-                    observador.unobserve(entrada.target); // animamos una sola vez
+                    observador.unobserve(entrada.target);
                 }
             });
         },
