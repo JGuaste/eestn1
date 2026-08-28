@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="estilos/base.css">
+    <link rel="stylesheet" href="/estilos/base.css">
     <link rel="stylesheet" href="estilos/Historia.css">
-    <link rel="stylesheet" href="estilos/nav-footer.css"> 
+    <link rel="stylesheet" href="/estilos/nav-footer.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finlandica+Headline:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+</head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia</title>
@@ -15,38 +20,41 @@
 <body>
     
  <header>
-     <div class="logo-contenedor">
-        <img src="imagenes/logoescuela.png" alt="Logo" class="logo-img">
-        <span class="logo-texto">E.E.S.T N°1</span>
+    <div class="logo-contenedor">
+        <img src="imagenes/Logo.png" alt="Logo de TecnoMarket" class="logo-img">
+        <span class="logo-texto">EEST N°1</span>
     </div>
-    
-    <button class="menu-respon" id="menu-respon">☰</button>
-    
+
+    <button class="menu-respon" id="menu-respon" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">☰</button>
+
     <nav class="nav-menu" id="nav-menu">
         <ul>
-            <li><a href="#">Inicio</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <div class="linea"></div>
             <li class="submenu">
-                <a href="#">Modalidades ▼</a>
+                <a href="#">Modalidades</a>
                 <ul class="submenu-contenido">
-                    <li><a href="programacion.html">Programación</a></li>
-                    <li><a href="electromecanica.html">Electromecánica</a></li>
+                    <li><a href="Programación.html">Programación</a></li>
+                    <li><a href="electromecánica.html">Electromecánica</a></li>
                     <li><a href="alimentos.html">Alimentos</a></li>
                 </ul>
             </li>
+            <div class="linea"></div>
             <li class="submenu">
-                <a href="#">Nosotros ▼</a>
+                <a href="#">Nosotros</a>
                 <ul class="submenu-contenido">
-                    <li><a href="#">Historias</a></li>
-                    <li><a href="#">Noticias</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Cooperadora</a></li>
-                    <li><a href="#">Centro estudiantes</a></li>
+                    <li><a href="historia.html">Historia </a></li>
+                    <li><a href="Noticias.html">Noticias</a></li>
+                    <li><a href="indexcop.html">Cooperadora</a></li>
+                    <li><a href="Nosotros/indexcentro.html">Centro estudiantes</a></li>
                 </ul>
             </li>
-            <li><a href="indexmarket.html">Marketplace</a></li>
+            <div class="linea"></div>
+            <li><a href="indexcentro.html" aria-current="page">Centro de Estudiantes</a></li>
+            <div class="linea"></div>
         </ul>
     </nav>
-    </header>
+</header>
     
     <main class="fondoParaHis">
      <div class="fondo-historia">
@@ -125,20 +133,46 @@ talleres de la escuela para festejar el medio siglo de trayectoria.
 </p>
 
    <p> Hoy en día, bajo la dirección de autoridades como la docente Paola Pignataro, la institución cuenta con una matrícula estable de aproximadamente 350 alumnos, distribuidos en más 
-    de 20 divisiones entre el Ciclo Básico y el Ciclo Superior. Sigue funcionando bajo el eje de la innovación, el compromiso social  y <section class="contenedor2">
-        <div class="tarjeta-1">
-            <h3>Proyectos Comunitarios </h3><p>
-                 como colectas de sangre y reparaciones para entidades locales
-</p>
-<h4>Ingresa en <a href="noticias.html">Noticias</a> Si quieres saber más</h4>
-        </div>
-</section>
-    <p>la formación de profesionales listos para los desafíos tecnológicos modernos.
+    de 20 divisiones entre el Ciclo Básico y el Ciclo Superior. Sigue funcionando bajo el eje de la innovación, el compromiso social  y la formación de profesionales listos para los desafíos tecnológicos modernos.
     </p>
 
 
 </p>
 </main>
+    <footer>
+        <div class="footer-columnas">
+            <div class="footer-col reveal" style="--retraso: 0s;">
+                <h4>E.E.S.T.</h4>
+                <p>Escuela de Educación Secundaria Técnica N°1 "Ejército Argentino"</p>
+                <p class="footer-direccion">
+                    <img src="imagenes/Ubicacion.png" alt="" class="ubicacion">
+                    <a href="https://www.google.com/maps/place/Escuela+De+Educaci%C3%B3n+Secundaria+T%C3%A9cnica+N%C2%BA1+%22Ej%C3%A9rcito+Argentino%22/@-34.9995008,-61.0369536,14z/data=!4m6!3m5!1s0x95bf4b57ed7cf6b1:0x5ee52c52f44d2436!8m2!3d-34.995334!4d-61.045388!16s%2Fg%2F11b7q8ndb6?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">San Martín 1655, B6015, Los Toldos</a>
+                </p>
+            </div>
 
+            <div class="footer-col reveal" style="--retraso: 0.12s;">
+                <h4>Contacto</h4>
+                <p><a href="mailto:tecnica@gmail.com">eest1gralviamonte@abc.gob.ar</a></p>
+                <p>02358 44-4142</p>
+            </div>
+
+            <div class="footer-col reveal" style="--retraso: 0.24s;">
+                <h4>Seguinos</h4>
+                <div class="footer-redes">
+                    <div class="social"><a href="https://www.facebook.com/escuela.tecnica.52/?locale=es_LA" target="_blank" rel="noopener noreferrer" aria-label="Facebook de la escuela"><img src="imagenes/facebook.gif" alt=""></a></div>
+                    <div class="social"><a href="https://www.instagram.com/escuelatecnica1_viamonte/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la escuela"><img src="imagenes/instagram.gif" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-inferior">
+            <p style="text-transform: capitalize;">provincia de buenos aires</p>
+            <strong>© 2026. Todos los derechos reservados.</strong>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
