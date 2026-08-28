@@ -40,3 +40,5 @@ Elimine: las paginas de electro,programacion,alimentos y el css prog, pero SE AG
 Se actualizo: Noticias.html, Noticias.css y se agrego: JavascriptNoticias(Contiene todo);. Francisco astobiza grupo 2
 
 Se sacaron los archivos del repositorio afuera (se mantuvo repositorio "viejo") con el motivo de preparar el entorno para hacer funcionar GitHub Pages. (Guastelli)
+
+actualize las paginas alimentos, electro, programacion, y sus css, sume las imagenes nuevas.(CHIARA VARGAS)
