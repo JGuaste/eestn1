@@ -1,13 +1,45 @@
-/* Estilos base del banner */
 .banner-contenedor {
     width: 100%;
     height: 400px;
     display: flex;
-    background: radial-gradient(circle,rgba(156, 0, 0, 1) 0%, rgba(71, 0, 0, 1) 100%);
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
+
+    position: relative;
+    overflow: hidden;
+
+    background: #470000;
+}
+
+.banner-contenedor::before {
+    content: "";
+    position: absolute;
+    inset: -50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(156, 0, 0, 1) 0%,
+        rgba(27, 0, 0, 0.712) 70%
+    );
+
+    animation: gradientMove 8s ease-in-out infinite alternate;
+}
+
+.banner-contenedor > * {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes gradientMove {
+    0% {
+        transform: translate(-15%, -10%);
+    }
+
+    100% {
+        transform: translate(15%, 10%);
+    }
 }
 
 /* Animación del texto (se desliza desde abajo y aparece) */
