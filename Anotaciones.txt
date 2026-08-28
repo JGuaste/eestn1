@@ -1,120 +1,61 @@
-Barra de navegación: sacar página de contacto, agregar enlace a centro de estudiantes. 
+index:
 
-Index: Sacar de Index esto " <div class="linea"></div>
-            <li><a href="indexmarket.html" aria-current="page">Marketplace</a></li>
-            <div class="linea"></div> " (probar como queda).
+busquen esta linea <li><a href="index.html">Inicio</a></li>
+            <div class="linea"></div>
 
-Cambiar imagen (fondoH), ver que el nombre de la escuela quede un poco mas abajo, y el titulo principal (tal vez mas grande) y el fondo mas oscuro. Evaluar la opción de un carrousel de imágenes.
+y peguen esto 
+aria-current="page" adentro de la etiqueta a
 
-Tarjetas de historia con enlace a la página de historia
-Otra tarjeta con las modalidades
-VEr como queda una de noticias.
+cambiar que diga modalidades en vez de especialidades, ver que no quuede pegado una vez que apretas el botón
 
-Ver color de las tarjetas (aplicar transparencias)
+agregar "botón" ver mas noticias
+enlace a centro de estudiantes
+enlace a market
+sacar la parte de contacto de la barra de navegacion
+-------------------------------------------------------------------------------------------------------------------------------
 
----------------------------------------------------------------------------------------------------------------------------------------
+electromecANICA, programación, alimentos
 
-Página programación:
+ver el width o margen  del subtitulo de la pagina "Electromecánica combina teoría y práctica para formar profesionales capaces de diseñar, instalar, mantener y gestionar sistemas electromecánicos, listos para insertarse en el mundo técnico y laboral." 
+cargar imagenes
 
-Barra de navegación:
-modificar esto: 
-
-
-	" <div class="linea"></div>
-            <li><a href="indexmarket.html" aria-current="page">Marketplace</a></li>
-            <div class="linea"></div> "
-
-Copiar el código HTML. (header y footer)
-Ver las fuentes
-Ver cantidad y disposición de información.
-Ver el banner (imagen??)
-Ver márgenes
-Respon		
-footer
+programacion copiar formato de alimentos (la ultima parte)
+en alimentos electromecanica cambiar cambiar el nav que digo e.e.s.t N°1
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-Página Electro:
+historia
 
-Barra de navegación:
-modificar esto: 
+cambiar en barra de navegacion que digo E.E.S.T N°1, y en vez de decir centro de estudiantes que diga "historia"
+vincular enlaces de historias (nav)
 
+sacar imagen de la sala de informatica
+aumentar el tamaño "Conocé quienes somos y quienes fuimos."
 
-	" <div class="linea"></div>
-            <li><a href="indexmarket.html" aria-current="page">Marketplace</a></li>
-            <div class="linea"></div> "
+aplicar formato de alimentos (body), subtitulos en rojo
+revisar footer (guastelli)
 
-Copiar el código HTML. (header y footer)
+--------------------------------------------------------------------------------------------------------------------------------------------
+noticias
 
-Ver cantidad de información
-Agregar fotos
-Alinear imagen en tarjeta
-fuentes
-Respons
-footer
-------------------------------------------------------------------------------------------------------------------------------------------
-Página Alimentos
+evaluar que noticias vamos a mostrar
+fondo de pagina
+----------------------------------------------------------------------------------------------------------------------------------------------
 
-Barra de navegación:
-modificar esto: 
+cooperadora
+subir el archivo que tengan actualizado
+ver enlace a centro de estudiantes
+-------------------------------------------------------------------------------------------------------------------------------------------
+centro de estudiantes
 
+corregir el eest n°1 por E.E.S.T N°1
+agregar fondo 
+agregar las imagenes del corrusel
+de la barra de navegacion no se actualizaron los enlaces a las otras paginas
+acomodar los integrantes hay algunos que estan en minuscula y otra celda que no esta cargada
+achicar tamaño de letra y en color negro, solo del cuerpo de la pagina no subtitulos
 
-	" <div class="linea"></div>
-            <li><a href="indexmarket.html" aria-current="page">Marketplace</a></li>
-            <div class="linea"></div> "
+--------------------------------------------------------
 
-Copiar el código HTML. (header y footer)
+market
 
-Ver cantidad de información
-Agregar fotos
-Alinear imagen en tarjeta
-fuentes
-Respons
-Ver fondo
-footer
-------------------------------------------------------------------------------------------------------------------------------------------
-Página Historia
-Barra de navegación:
-modificar esto: 
-
-
-	" <div class="linea"></div>
-            <li><a href="historia.html" aria-current="page">Historia</a></li>
-            <div class="linea"></div> "
-
-Ver fuentes
-Sacar tarjeta que dice noticias
-Poner footer
-respons
-------------------------------------------------------------------------------------------------------------------------------------------
-Página cooperadora
-
-completar integrantes
-enlaces de barra de navegación
-
-------------------------------------------------------------------------------------------------------------------------------------------
-Página centro de estudiantes
-
-barra de navegación (mantener el nombre de la escuela EESTN°1)
-Agregar banner
-modificar color
-ver background en el body (no tiene fondo)
-ver la lista de integrantes
-
-Ver el carrusel
-
-------------------------------------------------------------------------------------------------------------------------------------------
-Página de noticias
-
-falta
-
-------------------------------------------------------------------------------------------------------------------------------------------
-
-Market
-
-ver de sacar el fondo oscuro
-ver donde pueden llegar los mensajes de pedidos
-ver el color de fondo de las tarjetas
-ver transiciones de filtros (más rápido)
-achicar tarjeta de electromecánica
-agregar pedidos por encargue
-
+preguntar numero de celular para realizar pedidos (Guastelli)
