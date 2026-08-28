@@ -17,7 +17,7 @@ height: auto;
 display: block;
 }
 
-p {
+main p {
 font-family: var(--fuente-informacion);
 font-size: 15.5px;
 color: rgb(5, 0, 0);
@@ -26,7 +26,7 @@ margin: 20px 70px;
 
 h1 {
     font-family: var(--fuente-titulos);
-font-size: 80px;
+font-size: 48px;
 }
 
 h3 {
@@ -86,7 +86,7 @@ background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
 color: white;
-padding: 250px 20px;
+padding: 40px 20px;
 text-align: center;
 font-family: var(--fuente-titulos);
 }
@@ -96,7 +96,7 @@ font-family: var(--fuente-informacion);
 text-align: center;
 color: rgb(255, 255, 255);
 padding: 30px;
-font-size: 30px;
+font-size: 15px;
 }
 
 .imagenes img {
