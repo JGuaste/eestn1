@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <link rel="stylesheet" href="estilos/base.css">
-    <link rel="stylesheet" href="estilos/Alimentos.css">
-    <link rel="stylesheet" href="estilos/nav-footer.css">
+     <link rel="stylesheet" href="/estilos/base.css">
+    <link rel="stylesheet" href="/estilos/Alimentos.css">
+    <link rel="stylesheet" href="/estilos/nav-footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Finlandica+Headline:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"> 
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,52 +16,61 @@
     
 </body>
 <header>
-     <div class="logo-contenedor">
-        <img src="imagenes/logoescuela.png" alt="Logo" class="logo-img">
-        <span class="logo-texto">E.E.S.T N°1</span>
+<div class="logo-contenedor">
+        <img src="imagenes/Logo.png" alt="Logo de TecnoMarket" class="logo-img">
+        <span class="logo-texto">Tec.Alimentos</span>
     </div>
-    
-    <button class="menu-respon" id="menu-respon">☰</button>
-    
+
+    <button class="menu-respon" id="menu-respon" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">☰</button>
+
     <nav class="nav-menu" id="nav-menu">
         <ul>
-            <li><a href="#">Inicio</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <div class="linea"></div>
             <li class="submenu">
-                <a href="#">Modalidades ▼</a>
+                <a href="#">Modalidades</a>
                 <ul class="submenu-contenido">
                     <li><a href="programacion.html">Programación</a></li>
                     <li><a href="electromecanica.html">Electromecánica</a></li>
                     <li><a href="alimentos.html">Alimentos</a></li>
                 </ul>
             </li>
+            <div class="linea"></div>
             <li class="submenu">
-                <a href="#">Nosotros ▼</a>
+                <a href="#">Nosotros</a>
                 <ul class="submenu-contenido">
-                    <li><a href="historia.html">Historias</a></li>
+                    <li><a href="historia.html">Historia </a></li>
                     <li><a href="Noticias.html">Noticias</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Cooperadora</a></li>
-                    <li><a href="#">Centro estudiantes</a></li>
+                    <li><a href="indexCoop.html">Cooperadora</a></li>
+                    <li><a href="indexcentro.html">Centro estudiantil</a></li>
                 </ul>
             </li>
-            <li><a href="indexmarket.html">Marketplace</a></li>
+            <div class="linea"></div>
+            <li><a href="alimentos.html" aria-current="page">Tec.Alimentos</a></li>
+            <div class="linea"></div>
         </ul>
     </nav>
     </header>
        
     <main class="fondoAlimentos">
-    <div class="fondo-main">
+    
+        <div class="banner-contenedor">
+    <div class="banner-contenido">
         <h1>Tecnología De Los Alimentos</h1>
+        <p style="color: aliceblue;"> En Tecnologia De Los Alimentos 
+            se capacita para intervenir en todo el proceso de elaboración, conservación, control de calidad e 
+            inocuidad de los alimentos y bebidas. 
+conectado al laboratorio, la planta de elaboración y las normas legales.</p>
+        <div style=
+        "display: flex;
+        width: 100%;
+        background: var(--color-acento);
+        transition: width var(--transicion);
+        "
+         class="linea-subtitulo"></div>
     </div>
-      </div>
-     <div class="textoInfo">
-
-        <p><br> Técnico en Tecnología de los Alimentos: profesional de nivel medio con formación 
-            científica-tecnológica capacitado para intervenir en todo el proceso de elaboración, conservación, control de calidad e inocuidad de los alimentos y bebidas.</br>
-             <p>
-                conectado al laboratorio, la planta de elaboración y las normas legales. Aplica el método científico para transformar materias primas en productos seguros, nutritivos y aptos para el mercado.
-             </p>
-        </p></div>
+</div>
+</div>
         
         <div class="carrusel">
   <div class="tarjetas">
@@ -81,106 +90,95 @@
     </div>
   </div>
  
-   <div class="competencias-contenedor">
+   
+
+
+   
+   
+ <div class="contenedor-tarjeta">
+  
+    <div class="tarjeta-1">
+        <h3>Prácticas Profesionalizantes</h3>
+        <p>   la formacion de los estudiantes de 7mo año de la Escuela de Educacion tecnica N°1 
+        de General Viamonte, quienes egresan con el titulo"Tecnico en Tecnologias de los Alimentos.
+         Se hacen Practicas de forma educativo, 
+         inclusivo y universal, Grantizando el derecho de
+          los alumnos a trabajar en entornos
+           reales. vinculando la escuela con el sistema
+            socio-productivo local regional y nacional.</p>
+        
+     
+      
+    <div class="gallery-trigger">
+      <div class="trigger-button">Ver imágenes</div>
+      
+      <div class="gallery-container">
+        <img class="gallery-img" src="/imagenes/tectatarjeta2.jpg" alt="Imagen 1">
+        <img class="gallery-img" src="/imagenes/barrita.jpeg" alt="Imagen 2">
+        <img class="gallery-img" src="/imagenes/TECTAtarjeta.jpg" alt="Imagen 3">
+  
+      </div>
+    </div>
+  </div>
+    </div>
+
+  <div class="competencias-contenedor">
+    <h3>si tienen alguna idea para mejorar el estilo</h3>
     <h2>COMPETENCIAS Y SABERES PROFESIONALES</h2>
     <h3>A. Técnicas y de Proceso</h3>
-    <ol>
-        <li><strong>Elaboración de alimentos:</strong> Intervenir en procesos de lácteos, panificación, conservas, cárnicos, dulces, mermeladas, jugos y bebidas analcohólicas.</li>
-        <li><strong>Buenas Prácticas de Manufactura BPM y HACCP:</strong> Implementar y verificar normas de higiene, inocuidad y puntos críticos de control.</li>
-        <li><strong>Conservación de alimentos:</strong> Aplicar métodos físicos y químicos: pasteurización, esterilización, frío, deshidratación, salado, azucarado.</li>
-        <li><strong>Cálculos tecnológicos:</strong> Formular recetas, balances de materia, rendimiento, costos y escalado de producción.</li>
-    </ol> 
-
-    <h3>B. De Laboratorio y Control de Calidad</h3>
-
- <ol>
-     <li ><strong>Análisis fisicoquímicos:</strong> Determinar pH, acidez, grados Brix, humedad, cenizas, grasas, proteínas.</li>
-        <li><strong>Análisis microbiológicos básicos:</strong> Recuento de aerobios mesófilos, coliformes, mohos y levaduras. Interpretar resultados según CAA.</li>
-        <li><strong>Control sensorial:</strong> Evaluar color, olor, sabor y textura con fichas de degustación.</li>
-        <li><strong>Muestreo:</strong> Tomar muestras representativas según normas Codex/INAL.</li></ol> 
-    <h3>C. Legales, de Gestión y Sociales</h3>
-    <ol >
-        <li><strong>Legislación alimentaria:</strong> Interpretar y aplicar el Código Alimentario Argentino CAA. Rotulado, etiquetado nutricional, habilitaciones.</li>
-        <li><strong>Gestión de calidad:</strong> Documentar procesos, registros de trazabilidad, fichas técnicas y bitácoras de producción.</li>
-        <li><strong>Seguridad e Higiene Laboral:</strong> Aplicar normas de seguridad en plantas y laboratorios. Uso de EPP.</li>
-    <li><strong> Emprendedorismo: Asesorar en microemprendimientos alimentarios, cálculo de costos y diseño de producto.</strong></li>
-    </ol>
-    <h2> HABILIDADES Y ACTITUDES</h2>
-<ul>
-    <li>
-        <strong>Pensamiento crítico:</strong> Resolver problemas de proceso. 
-        <em>Ejemplos:</em> "¿Por qué no gelificó la mermelada?", "¿Por qué se infló el frasco?".
-    </li>
-    <li>
-        <strong>Trabajo en equipo:</strong> Coordinar con operarios, ingenieros y personal de calidad.
-    </li>
-    <li>
-        <strong>Responsabilidad y ética:</strong> Entender que un error en alimentos impacta en la salud pública.
-    </li>
-    <li>
-        <strong>Manejo de tecnología:</strong> Utilizar software de gestión, termómetros, pHmetros, refractómetros y balanzas.
-    </li>
-    <li>
-        <strong>Comunicación técnica:</strong> Redactar informes, instructivos y planos de planta.
-    </li>
-</ul>
-
-<h2>CAMPO LABORAL E INCUMBENCIAS</h2>
-<p>Puede desempeñarse en:</p>
-<ul>
-    <li>
-        <strong>Industria Alimentaria:</strong> Frigoríficos, lácteas, panificadoras, conserveras, bebidas. Como encargado de turno, asistente de laboratorio o de calidad.
-    </li>
-    <li>
-        <strong>Laboratorios:</strong> Bromatología municipal, provincial o privados, realizando análisis.
-    </li>
-    <li>
-        <strong>Organismos de control:</strong> SENASA, Bromatología, habilitaciones comerciales.
-    </li>
-    <li>
-        <strong>Microemprendimientos:</strong> Asesorar o ser responsable técnico de una fábrica de dulces, panificados, jugos, como la del proyecto de feria.
-    </li>
-    <li>
-        <strong>Docencia y Extensión:</strong> Auxiliar en escuelas técnicas, INTA, o capacitaciones a manipuladores de alimentos.
-
-    </li>
-    <p>
-        
-        "Garantizamos que lo que llegue a tu mesa sea Seguro, Nutritivo, y de Calidad, uniendo ciencia, trabajo y respeto por el consumidor"
     
-    </p>
-    <h2>PRACTICAS FORMATIVAS Y PROFECIONALIZANTES</h2>
-    
-    <p>
-        la formacion de los estudiantes de 7mo año de la Escuela de Educacion tecnica N°1 
-        de General Viamonte, quienes egresan con el titulo"Tecnico en Tecnologias de los Alimentos.
+   <p> El perfil del técnico en industrias alimentarias se estructura en tres grandes pilares operativos, legales y actitudinales. En el área productiva, domina la elaboración de alimentos —como lácteos, carnes y panificados—, aplica normas de inocuidad como BPM y HACCP, y maneja métodos de conservación y cálculos tecnológicos de costos y rendimiento. En el plano de control, ejecuta análisis fisicoquímicos y microbiológicos básicos, realiza evaluaciones sensoriales y asegura un muestreo normado. En el marco legal y de gestión, interpreta el Código Alimentario Argentino, gestiona la trazabilidad y asesora en microemprendimientos bajo estrictas normas de seguridad laboral. Finalmente, todo este saber técnico se sostiene sobre un sólido enfoque actitudinal, destacando el pensamiento crítico para resolver problemas de proceso, el trabajo colaborativo, la ética en la salud pública y el manejo eficiente de
+     instrumental de laboratorio y tecnología. </p>
 
-    </p>
-    
-    <p>
-         Se hacen Practicas de forma educativo, inclusivo y universal, Grantizando el derecho de los alumnos a trabajar en entornos reales. vinculando la escuela con el sistema socio-productivo local regional y nacional.
-    </p>
+
+   
 
 
     
 
-    
 
-
-
-</ul>
 
 
 
 </div>
 
 
-
-
-
 </main>
 
-    <script src="script.js"></script>
+   
+     <footer>
+        <div class="footer-columnas">
+            <div class="footer-col reveal" style="--retraso: 0s;">
+                <h4>E.E.S.T.</h4>
+                <p>Escuela de Educación Secundaria Técnica N°1 "Ejército Argentino"</p>
+                <p class="footer-direccion">
+                    <img src="imagenes/Ubicacion.png" alt="" class="ubicacion">
+                    <a href="https://www.google.com/maps/place/Escuela+De+Educaci%C3%B3n+Secundaria+T%C3%A9cnica+N%C2%BA1+%22Ej%C3%A9rcito+Argentino%22/@-34.9995008,-61.0369536,14z/data=!4m6!3m5!1s0x95bf4b57ed7cf6b1:0x5ee52c52f44d2436!8m2!3d-34.995334!4d-61.045388!16s%2Fg%2F11b7q8ndb6?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">San Martín 1655, B6015, Los Toldos</a>
+                </p>
+            </div>
+
+            <div class="footer-col reveal" style="--retraso: 0.12s;">
+                <h4>Contacto</h4>
+                <p><a href="mailto:tecnica@gmail.com">eest1gralviamonte@abc.gob.ar</a></p>
+                <p>02358 44-4142</p>
+            </div>
+
+            <div class="footer-col reveal" style="--retraso: 0.24s;">
+                <h4>Seguinos</h4>
+                <div class="footer-redes">
+                    <div class="social"><a href="https://www.facebook.com/escuela.tecnica.52/?locale=es_LA" target="_blank" rel="noopener noreferrer" aria-label="Facebook de la escuela"><img src="imagenes/facebook.gif" alt=""></a></div>
+                    <div class="social"><a href="https://www.instagram.com/escuelatecnica1_viamonte/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la escuela"><img src="imagenes/instagram.gif" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-inferior">
+            <p style="text-transform: capitalize;">provincia de buenos aires</p>
+            <strong>© 2026. Todos los derechos reservados.</strong>
+        </div>
+
+    </footer>
+      <script src="script.js"></script>
     </body>
     </html>
 
