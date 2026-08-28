@@ -50,17 +50,16 @@ submenus.forEach((submenu) => {
     });
 });
 
-// --- FILTRO DE CATEGORÍAS DEL MARKETPLACE (con transición animada) ---
+// --- FILTRO DE CATEGORÍAS DEL MARKETPLACE (cambio casi instantáneo) ---
 // Cada chip de filtro tiene un atributo data-categoria ("todos",
 // "programacion", "electromecanica" o "alimentos") y cada tarjeta de
 // producto tiene ese mismo dato en su propio data-categoria.
-// En vez de mostrar/ocultar de golpe con display, le agregamos la clase
-// "oculta" (que en CSS hace un fade + escala) y recién después de que
-// termina la transición la sacamos del flujo con display:none.
+// Las tarjetas que no coinciden salen del flujo de inmediato (sin esperar
+// a que termine ninguna animación); las que quedan hacen apenas un fade
+// cortito para no verse un corte totalmente seco.
 const chips = document.querySelectorAll('.filtro-chip');
 const tarjetas = document.querySelectorAll('.tarjeta-producto');
 const mensajeVacio = document.getElementById('market-vacio');
-const DURACION_TRANSICION = 350; // debe coincidir con la transición de opacity en market.css
 
 chips.forEach((chip) => {
     chip.addEventListener('click', () => {
@@ -82,19 +81,13 @@ chips.forEach((chip) => {
                 visibles++;
                 tarjeta.style.display = 'flex';
                 // Forzamos un reflow para que el navegador "registre" el
-                // display:flex antes de sacar la clase oculta y así la
-                // transición de opacity/scale se vea (si no, salta sin animar).
+                // display:flex antes de sacar la clase oculta y así el
+                // fade cortito se note (si no, salta sin animar).
                 void tarjeta.offsetWidth;
                 tarjeta.classList.remove('oculta');
             } else {
                 tarjeta.classList.add('oculta');
-                // Esperamos a que termine el fade-out para recién ahí
-                // sacarla del flujo del grid con display:none.
-                setTimeout(() => {
-                    if (tarjeta.classList.contains('oculta')) {
-                        tarjeta.style.display = 'none';
-                    }
-                }, DURACION_TRANSICION);
+                tarjeta.style.display = 'none'; // sale del flujo YA, sin esperar
             }
         });
 
