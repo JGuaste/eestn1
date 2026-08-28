@@ -14,69 +14,70 @@
     color: #222;
     line-height: 1.6;
 }
-
-
 /* =========================================
-   BANNER
+   BASE DEL BANNER
 ========================================= */
-
 .banner-contenedor {
     width: 100%;
-    min-height: 400px;
-
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background: linear-gradient(
-        135deg,
-        #2e0707 0%,
-        #971010 100%
-    );
-
     text-align: center;
     color: white;
 
-    box-sizing: border-box;
-    padding: 2rem 1rem;
+    position: relative;
+    overflow: hidden;
+
+    background: #470000;
 }
 
+.banner-contenedor::before {
+    content: "";
+    position: absolute;
+    inset: -50%;
 
-.banner-contenido {
-    width: min(900px, 100%);
+    background: radial-gradient(
+        circle,
+        rgba(156, 0, 0, 1) 0%,
+        rgba(27, 0, 0, 0.712) 70%
+    );
+
+    animation: gradientMove 8s ease-in-out infinite alternate;
 }
 
+.banner-contenedor > * {
+    position: relative;
+    z-index: 1;
+}
 
+@keyframes gradientMove {
+    0% {
+        transform: translate(-15%, -10%);
+    }
+
+    100% {
+        transform: translate(15%, 10%);
+    }
+}
+
+/* Animación del texto (se desliza desde abajo y aparece) */
 .banner-contenido h1 {
-    margin: 0 0 0px;
-
-    font-size: 3rem;
-
     animation: deslizarArriba 1.5s ease-out forwards;
     opacity: 0;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    font-family: var(--fuente-titulos);
 }
 
 
-.banner-contenido p {
-    margin: 0;
 
-    font-size: 1.15rem;
-
-    animation: aparecer 1.8s ease-out forwards;
-    opacity: 0;
-}
-
-
-/* =========================================
-   ANIMACIONES
-========================================= */
-
+/* Definición de los fotogramas clave (keyframes) */
 @keyframes deslizarArriba {
     0% {
         opacity: 0;
         transform: translateY(50px);
     }
-
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -84,15 +85,7 @@
 }
 
 
-@keyframes aparecer {
-    0% {
-        opacity: 0;
-    }
 
-    100% {
-        opacity: 1;
-    }
-}
 
 
 /* =========================================
