@@ -68,6 +68,14 @@ img {
     font-size: 3rem;
     font-family: var(--fuente-titulos);
 }
+.banner-contenido P{
+     width: 60%;
+  margin: 0 auto; /* Centra la caja del párrafo horizontalmente */
+  text-align: center; /* Opcional: centra el texto internamente */
+  font-family: var(--fuente-informacion);
+  font-size: 15.5px;
+  color: rgb(5, 0, 0);
+}
 
 @keyframes deslizarArriba {
     0% {
@@ -281,4 +289,10 @@ h1{
     transform: scale(3.2);
     z-index: 30;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+h3 {
+  margin: 20px 70px;
+    color: rgb(109, 6, 6);
+  
+    font-family:var(--fuente-titulos); 
 }
