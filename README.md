@@ -42,3 +42,6 @@ Se actualizo: Noticias.html, Noticias.css y se agrego: JavascriptNoticias(Contie
 Se sacaron los archivos del repositorio afuera (se mantuvo repositorio "viejo") con el motivo de preparar el entorno para hacer funcionar GitHub Pages. (Guastelli)
 
 actualize las paginas alimentos, electro, programacion, y sus css, sume las imagenes nuevas.(CHIARA VARGAS)
+
+subi la pagina de electro y alimentos y sus css(chiara
+)
