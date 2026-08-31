@@ -15,14 +15,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Finlandica+Headline:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 
-<body class="pagina">
+<body class="pagina noticias-fondo">
 
 <header>
+    <!-- Logo de la escuela con enlace a index.html -->
+    <a href="index.html" style="
+    text-decoration: none;
+    color: #fff;">
+
     <div class="logo-contenedor">
         <img src="imagenes/Logo.png" alt="Logo de TecnoMarket" class="logo-img">
         <span class="logo-texto">E.E.S.T. N°1</span>
     </div>
+    </a>
 
+
+    <!-- Botón responsivo (Se activa a tal resolucion(celulares)) Por defecto esta display none-->
     <button class="menu-respon" id="menu-respon" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">☰</button>
 
     <nav class="nav-menu" id="nav-menu">
@@ -39,16 +47,16 @@
             </li>
             <div class="linea"></div>
             <li class="submenu">
-                <a href="#">Nosotros</a>
+                <a href="#"   aria-current="page">Nosotros</a>
                 <ul class="submenu-contenido">
                  <li><a href="historia.html">Historia </a></li>
                     <li><a href="noticias.html">Noticias</a></li>
-                    <li><a href="indexCoop.html">Cooperadora</a></li>
+                    <li><a href="cooperadora.html">Cooperadora</a></li>
                     <li><a href="indexcentro.html">Centro estudiantil</a></li>
                 </ul>
             </li>
             <div class="linea"></div>
-            <li><a href="noticias.html" aria-current="page">Noticias</a></li>
+            <li><a href="noticias.html">Marketplace</a></li>
             <div class="linea"></div>
         </ul>
     </nav>
@@ -65,9 +73,9 @@
     </div>
 </section>
 
-
 <!-- CONTENIDO PRINCIPAL -->
 <main class="contenedor">
+
 
     <article class="noticia">
         <span class="etiqueta">Institucional</span>
@@ -232,7 +240,6 @@
     <!--Botoncito ver-mas-->
         <a href="#" class="ver-mas">Ver más</a>
     </article>
-
 </main>
 
 
