@@ -78,7 +78,7 @@ body {
   p{
       font-family:var(--fuente-informacion);
    font-size: 20px;
-   color:rgb(5, 0, 0);
+   color:rgb(0, 0, 0);
     margin: 10px;
   }
 .InfModalidad h1{
