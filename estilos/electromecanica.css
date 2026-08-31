@@ -23,12 +23,12 @@ main p {
     max-width: 100%;
 font-family: var(--fuente-informacion);
 font-size: 15.5px;
-color: rgb(5, 0, 0);
+color: rgb(0, 0, 0);
 margin: 20px 70px;
 }
 
 h3 {
-color: black;
+color: rgb(0, 0, 0);
 font-family: var(--fuente-titulos);
 }
 .fondoElectro{  
@@ -120,6 +120,14 @@ opacity: 0;
 margin-bottom: 10px;
 font-size: 3rem;
 font-family: var(--fuente-titulos);
+}
+.banner-contenido p{
+   width: 60%;
+  margin: 0 auto; /* Centra la caja del párrafo horizontalmente */
+  text-align: center; /* Opcional: centra el texto internamente */
+  font-family: var(--fuente-informacion);
+  font-size: 15.5px;
+  color: rgb(5, 0, 0);
 }
 
 /* ==========================================================================
