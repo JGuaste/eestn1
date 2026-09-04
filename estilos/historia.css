@@ -72,7 +72,7 @@ padding: 40px 5%;
 3. Sección Historia
 ========================================================================== */
 .fondoParaHis {
-background-image: url(/imagenes/fondogeneral.png);
+/*background-image: url(/imagenes/fondogeneral.png);*/
 background-size: cover;
 background-position: center top;
 background-repeat: no-repeat;
