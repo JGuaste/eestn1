@@ -19,7 +19,7 @@
     font-family: var(--fuente-titulos);
 }
 body {
-    background-image: url("../imagenes/fondoescuela.png");
+    background:#f6f1ea; 
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -254,9 +254,7 @@ font-size:50px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 26px 22px 22px;
-    border-radius: var(--radio-borde);
     text-align: center;
-    box-shadow: var(--sombra-suave);
     border: 1.5px solid rgba(255, 255, 255, 0.203);
     display: flex;
     flex-direction: column;
@@ -430,7 +428,7 @@ summary::-webkit-details-marker {
 }
 
 summary:hover {
-  background-color: #f3c2a1;
+  background-color: #fffefd;
 }
 
 /* Icono dinámico +/- con rotación */
