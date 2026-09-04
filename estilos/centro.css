@@ -264,7 +264,7 @@ font-size:50px;
     animation-delay: calc(0.45s + var(--orden, 0) * 0.12s);
     margin:5%;  
     font-family: var(--fuente-titulo);
-    color:var(--color-menu-claro);
+    color:#5c4a4d;
 }
 
 
