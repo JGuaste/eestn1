@@ -1,22 +1,72 @@
 /* Estilos base del banner */
+/* =========================================
+   BASE DEL BANNER
+========================================= */
 .banner-contenedor {
     width: 100%;
     height: 400px;
     display: flex;
-    background: radial-gradient(circle,rgba(156, 0, 0, 1) 0%, rgba(71, 0, 0, 1) 100%);
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
+
+    position: relative;
+    overflow: hidden;
+
+    background: #470000;
+}
+
+.banner-contenedor::before {
+    content: "";
+    position: absolute;
+    inset: -50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(156, 0, 0, 1) 0%,
+        rgba(27, 0, 0, 0.712) 70%
+    );
+
+    animation: gradientMove 8s ease-in-out infinite alternate;
+}
+
+.banner-contenedor > * {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes gradientMove {
+    0% {
+        transform: translate(-15%, -10%);
+    }
+
+    100% {
+        transform: translate(15%, 10%);
+    }
 }
 
 /* Animación del texto (se desliza desde abajo y aparece) */
 .banner-contenido h1 {
     animation: deslizarArriba 1.5s ease-out forwards;
-    opacity: 1;
+    opacity: 0;
     margin-bottom: 10px;
     font-size: 3rem;
     font-family: var(--fuente-titulos);
+}
+
+
+
+/* Definición de los fotogramas clave (keyframes) */
+@keyframes deslizarArriba {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 body {
     background:#f6f1ea; 
@@ -241,13 +291,7 @@ en vez de cortar de golpe con display:none. */
     font-size: 1.1rem;
 }
 
-.baner{
-background: radial-gradient(red,rgb(123, 16, 16));
 
-text-align: center;
-font-size:50px;
-
-}
 .queesuncentro{
     position: relative;
     background:#f6f1ea;
