@@ -113,34 +113,65 @@
 }
 
 
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
 .noticia {
-    background: #fff;
-
+    background: transparent; /* Cambiado a transparente para que se vea el fondo blanco del pseudo-elemento */
     border-radius: 12px;
-
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-
     padding: 1.5rem;
-
     margin-bottom: 1.5rem;
-
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
+    
+    position: relative;
+    z-index: 1; 
 }
 
+/* CAPA 1 (Más al fondo): El degradado amarillo */
+.noticia::after {
+    content: '';
+    position: absolute;
+    inset: -3px; /* Grosor del borde */
+    z-index: -2; /* Enviado completamente al fondo */
+    border-radius: 15px; 
+    background-image: conic-gradient(from var(--angle), #FFBB00, #FFCB3BB6, transparent 92%);
+    animation: girarBorde 10s linear infinite;
+}
+
+/* CAPA 2 (En medio): El fondo blanco que tapa el centro del degradado */
+.noticia::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1; /* Queda por encima del amarillo pero por debajo del texto */
+    background: #fff; /* Tu color blanco original */
+    border-radius: 12px;
+}
 
 .noticia:hover {
     transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
 
-    box-shadow:
-        0 6px 16px rgba(0, 0, 0, 0.12);
+@keyframes girarBorde {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
 }
 
 
-.noticia__titulo {
-    color: #971010;
 
+.noticia__titulo {
+    color: #353535;
     font-size: 1.35rem;
     font-family: var(--fuente-titulos);
     margin-top: 0;
@@ -217,7 +248,7 @@
 .ver-mas {
     display: inline-block;
 
-    color: #35792d;
+    color: #990000;
 
     text-decoration: none;
 
@@ -232,9 +263,9 @@
 
 
 .ver-mas:hover {
-    color: #3e9934;
+    color: #aa0000;
 
-    border-bottom-color: #45a73a;
+    border-bottom-color: #8d0000;
 }
 
 /* =========================================
