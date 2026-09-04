@@ -92,14 +92,6 @@ button:focus-visible {
     outline-offset: 2px;
 }
 
-/* Reduce el movimiento si el usuario lo pidió en su sistema operativo */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-
 /* FUENTES — clases utilitarias por si se necesitan fuera de los roles fijos */
 .montserrat-uniquifier {
   font-family: 'Montserrat', sans-serif;
