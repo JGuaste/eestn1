@@ -20,20 +20,16 @@
 <body>
 
 <header>
-   <a href="index.html" style="
-    text-decoration: none;
-    color: #fff;">
-<div class="logo-contenedor">
+    <div class="logo-contenedor">
         <img src="imagenes/Logo.png" alt="Logo de TecnoMarket" class="logo-img">
         <span class="logo-texto">E.E.S.T N°1</span>
     </div>
-    </a>
 
     <button class="menu-respon" id="menu-respon" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">☰</button>
 
     <nav class="nav-menu" id="nav-menu">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html" aria-current="page">Inicio</a></li>
             <div class="linea"></div>
             <li class="submenu">
                 <a href="#">Modalidades</a>
@@ -48,13 +44,14 @@
                 <a href="#">Nosotros</a>
                 <ul class="submenu-contenido">
                     <li><a href="historia.html">Historia </a></li>
-                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="Noticias.html">Noticias</a></li>
+                    <li><a href="#">Contacto</a></li>
                     <li><a href="indexCoop.html">Cooperadora</a></li>
-                    <li><a href="indexcentro.html">Centro estudiantil</a></li>
+                    <li><a href="#">Centro estudiantil</a></li>
                 </ul>
             </li>
             <div class="linea"></div>
-            <li><a href="indexmarket.html" aria-current="page">Marketplace</a></li>
+            <li><a href="indexmarket.html">Marketplace</a></li>
             <div class="linea"></div>
         </ul>
     </nav>
@@ -73,7 +70,7 @@
     
 
     <section id="especialidades" class="contenedor">
-   <h2> Nuestras Especialidades</h2>
+   <h2> Nuestras Modalidades</h2>
       <div class="grilla-tarjetas">
         <div class="tarjeta">
             <i class="fa-solid fa-bolt"></i>
@@ -108,16 +105,19 @@
 <section id="noticias" class="noticias-section">
     <div class="contenedor">
         <h2>Últimas Novedades</h2>
-        <div class="noticias-grilla">
-            <div class="noticia-tarjeta">
-                <h4>Semana del estudiante</h4>
-                <p class="fecha">Próximamente</p>
-                <p>la semana del estudiante se aproxima y los alumnos organizan sus equipo para cada actividad.</p>
+        <div class="noticias-grilla" >
+            <div class="noticia-tarjeta"><a href="noticias.html">
+                <h4>Apertura del Nuevo taller de Robotica</h4>
+                <p class="fecha">7 de Agosto 2026</p>
+                <p>Se inauguró el taller de robótica con equipamiento de última generación para que los estudiantes puedan desarrollar proyectos de automatización y programación.</p>
+            </a>
             </div>
-            <div class="noticia-tarjeta">
-                <h4>Utp y Mas</h4>
+            
+           <div class="noticia-tarjeta"><a href="indexcentro.html">
+                <h4>UPE Y mas</h4>
                 <p class="fecha">Próximamente</p>
-                <p>este año se hacen varias cosas para los chicos de 7to y 6to que quieran participar .</p>
+                <p>Este año se hacen varias cosas para los chicos de 7to y 6to que quieran participar .</p>
+            </a>
             </div>
         </div>
     </div>
