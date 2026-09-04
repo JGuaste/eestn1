@@ -151,5 +151,22 @@ section p{
     color: #ddd03c;
 }
 
+.noticia-tarjeta a{
+    text-decoration: none;
+}
 
+.noticia-tarjeta:hover h4{
+    color:#ce7e23 ;
+   
+}
 
+.noticia-tarjeta:hover p{
+    color: #ce7e23;
+}
+
+.noticia-tarjeta:hover{
+    background-color:#ffffffde;
+   box-shadow: 0 10px 20px rgb(0, 0, 0,.15);
+      transform: translateY(-5px);
+
+}
