@@ -1,58 +1,72 @@
 index:
 
-busquen esta linea <li><a href="index.html">Inicio</a></li>
-            <div class="linea"></div>
+sacar boton
+agregar transicion--- 
+.banner-contenido h1 {
+    animation: deslizarArriba 1.5s ease-out forwards;
+    opacity: 0;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    font-family: var(--fuente-titulos);
+}
 
-y peguen esto 
-aria-current="page" adentro de la etiqueta a
 
-cambiar que diga modalidades en vez de especialidades, ver que no quuede pegado una vez que apretas el botón
 
-agregar "botón" ver mas noticias
-enlace a centro de estudiantes
-enlace a market
-sacar la parte de contacto de la barra de navegacion
+/* Definición de los fotogramas clave (keyframes) */
+@keyframes deslizarArriba {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 -------------------------------------------------------------------------------------------------------------------------------
 
 electromecANICA, programación, alimentos
 
-ver el width o margen  del subtitulo de la pagina "Electromecánica combina teoría y práctica para formar profesionales capaces de diseñar, instalar, mantener y gestionar sistemas electromecánicos, listos para insertarse en el mundo técnico y laboral." 
-cargar imagenes
-
-programacion copiar formato de alimentos (la ultima parte)
-en alimentos electromecanica cambiar cambiar el nav que digo e.e.s.t N°1
+pegar esta linead dentro del head
+<link rel="icon" href="imagenes/Logo.png" type="image/png">
+corregir subtitulo abajo del banner
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 historia
+pegar esta linea en el head
+<link rel="icon" href="imagenes/Logo.png" type="image/png">
 
-cambiar en barra de navegacion que digo E.E.S.T N°1, y en vez de decir centro de estudiantes que diga "historia"
-vincular enlaces de historias (nav)
+sacar boton
 
-sacar imagen de la sala de informatica
-aumentar el tamaño "Conocé quienes somos y quienes fuimos."
+falta enlace en la barra de navegacion en la parte E.E.S.T N°1
+corregir enlaces de programacion y electromecanica, cambiar a estas lineas
 
-aplicar formato de alimentos (body), subtitulos en rojo
-revisar footer (guastelli)
+<li><a href="programacion.html">Programación</a></li>
+<li><a href="electromecanica.html">Electromecánica</a></li>
+<li><a href="alimentos.html">Alimentos</a></li>
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 noticias
 
 evaluar que noticias vamos a mostrar
-fondo de pagina
+
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
 cooperadora
-subir el archivo que tengan actualizado
+
 ver enlace a centro de estudiantes
+
+pegar esta linea en el head
+<link rel="icon" href="imagenes/Logo.png" type="image/png">
+
+ver acentos en los nombres de la cooperadora
 -------------------------------------------------------------------------------------------------------------------------------------------
 centro de estudiantes
 
-corregir el eest n°1 por E.E.S.T N°1
-agregar fondo 
-agregar las imagenes del corrusel
-de la barra de navegacion no se actualizaron los enlaces a las otras paginas
-acomodar los integrantes hay algunos que estan en minuscula y otra celda que no esta cargada
-achicar tamaño de letra y en color negro, solo del cuerpo de la pagina no subtitulos
+
+falta enlace en la barra de navegacion en la parte E.E.S.T N°1
+corregir nombres de integrantes del centro
+agregar nombre del centro
 
 --------------------------------------------------------
 
