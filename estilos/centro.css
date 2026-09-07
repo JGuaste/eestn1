@@ -78,7 +78,8 @@ body {
 
 .queesuncentro{
     position: relative;
-    width: 1050px ;
+    width: 100%;
+    max-width: 1050px;
     height: auto;
     background:#f6f1ea;
     padding: 26px 22px 22px;
@@ -95,6 +96,27 @@ body {
      margin: auto;
     font-family: var(--fuente-titulo);
     color:var(--color-menu-claro);
+}
+
+.queesuncentro p {
+    max-width: 800px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .queesuncentro {
+        padding: 22px 16px 18px;
+    }
+}
+
+@media (max-width: 560px) {
+    .queesuncentro {
+        padding: 18px 14px 16px;
+        border-radius: 8px;
+    }
+    .queesuncentro h2 {
+        font-size: 1.15rem;
+    }
 }
 
 
