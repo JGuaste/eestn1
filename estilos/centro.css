@@ -464,6 +464,7 @@ summary {
   list-style: none;
   user-select: none;
   transition: background-color 0.2s ease;
+   margin-top: 30px;
 }
 
 /* Oculta la flecha nativa del navegador */
