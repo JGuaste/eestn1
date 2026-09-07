@@ -1,14 +1,29 @@
-/* ========================================================================== 
+/* ========================================================================== 
 
 1. Estilos Globales y Base
 ========================================================================== */
 html {
 scroll-behavior: smooth;
+height: 100%;
 }
 
 body {
+-webkit-backdrop-filter: blur(10px);
 animation: aparecer 1.5s ease;
 background-color: #ffe9e18f;
+backdrop-filter: blur(10px);
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+margin: 0;
+}
+
+main {
+flex: 1 0 auto;
+}
+
+footer {
+flex-shrink: 0;
 }
 
 img {
@@ -35,7 +50,75 @@ h3 {
 margin: 15px;
 }
 
+/* =========================================
+   BASE DEL BANNER
+========================================= */
+.banner-contenedor {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
 
+    position: relative;
+    overflow: hidden;
+
+    background: #470000;
+}
+
+.banner-contenedor::before {
+    content: "";
+    position: absolute;
+    inset: -50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(156, 0, 0, 1) 0%,
+        rgba(27, 0, 0, 0.712) 70%
+    );
+
+    animation: gradientMove 8s ease-in-out infinite alternate;
+}
+
+.banner-contenedor > * {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes gradientMove {
+    0% {
+        transform: translate(-15%, -10%);
+    }
+
+    100% {
+        transform: translate(15%, 10%);
+    }
+}
+
+/* Animación del texto (se desliza desde abajo y aparece) */
+.banner-contenido h1 {
+    animation: deslizarArriba 1.5s ease-out forwards;
+    opacity: 0;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    font-family: var(--fuente-titulos);
+}
+
+
+
+/* Definición de los fotogramas clave (keyframes) */
+@keyframes deslizarArriba {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* ==========================================================================
 2. Componentes Comunes y Estructuras
 ========================================================================== */
@@ -66,18 +149,28 @@ justify-content: flex-start;
 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 gap: 20px;
 padding: 40px 5%;
+transition: all 0.3s ease;
 }
 
 /* ==========================================================================
 3. Sección Historia
 ========================================================================== */
 .fondoParaHis {
-/*background-image: url(/imagenes/fondogeneral.png);*/
-background-size: cover;
+position: relative;
+min-height: 100vh;
+overflow: hidden;
+}
+
+.fondoParaHis::before {
+content: "";
+position: fixed;
+inset: 0;
+background-image: url(/imagenes/fondogeneral.png);
 background-position: center top;
 background-repeat: no-repeat;
-background-attachment: fixed;
-min-height: 100vh;
+filter: blur(3px);
+transform: scale(1.05);
+z-index: -1;
 }
 
 .fondo-historia {
@@ -89,6 +182,7 @@ color: white;
 padding: 40px 20px;
 text-align: center;
 font-family: var(--fuente-titulos);
+backdrop-filter: blur(20px);
 }
 
 .TextoInicioHistoria p {
@@ -116,6 +210,7 @@ border-radius: 10px;
 box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 box-sizing: border-box;
 overflow: hidden;
+transition: all 0.3s ease;
 }
 
 .tarjeta-1:hover {
