@@ -1,0 +1,52 @@
+.inscripcion-contenedor {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-fuerte);
+    font-family: var(--fuente-titulos);
+}
+
+.inscripcion-contenedor h2 {
+    color: #7a0f0f;
+    margin-bottom: 10px;
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-grupo input, 
+.form-grupo select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--fuente-informacion);
+}
+
+.btn-enviar {
+    background-color: #7a0f0f;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+    font-family: var(--fuente-informacion);
+}
+
+.btn-enviar:hover {
+    background-color: #923232;
+}
