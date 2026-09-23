@@ -50,3 +50,6 @@ subi la pagina y su css de programacion(banegas)
 se corrigio acentos y espaciado en centro de estudiantes, en index se acomodaton enlaces en barra de navegacion (guastelli)
 se corrigio las lineas e informacion del banner de las tres modalidades(chiara y bane]
 )
+
+
+HAY QUE CORREGIR UN LINK, DE ELECTROMECÁNICA A NOTICIAS.
