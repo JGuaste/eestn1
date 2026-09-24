@@ -52,4 +52,8 @@ se corrigio las lineas e informacion del banner de las tres modalidades(chiara y
 )
 
 
-HAY QUE CORREGIR UN LINK, DE ELECTROMECÁNICA A NOTICIAS.
+HAY QUE CORREGIR UN LINK, DE ELECTROMECÁNICA A NOTICIAS. quien???
+
+se agregó directorio videos, se actualiza seccion noticias e index. (Guastelli)
+
+
