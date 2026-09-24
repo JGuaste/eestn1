@@ -359,7 +359,7 @@
     box-sizing: border-box;
 }
 
-/* --- Estilo del reproductor de video adaptativo --- */
+/* --- Estilo del reproductor de video --- */
 .noticia-video-contenedor video {
     width: 100%;
     height: auto;
@@ -367,7 +367,7 @@
     display: block;
     margin: 0 auto;
     border-radius: 12px;
-    object-fit: contain;
+    object-fit: contain; /* Muestra contenido sin recortar */
     background: #000;
 }
 .noticia.expandida .noticia__extra {
