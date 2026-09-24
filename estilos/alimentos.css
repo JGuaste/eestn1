@@ -278,6 +278,7 @@ font-size: 1.5rem;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   background-color: #38030c;/*NO LO TOMA*/
+  margin-bottom: 20px;
 }
 
 /* La tira que contiene las 4 imágenes en línea */

@@ -311,3 +311,10 @@ position: absolute;
 .footer-columnas .footer-col reveal h4{
   color: white;
 }
+.contenedor {
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;*/
+    margin-bottom: 20px;
+}
