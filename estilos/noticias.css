@@ -346,3 +346,24 @@
         font-size: 1.2rem;
     }
 }
+
+/* --- Contenedor del video local en noticias --- */
+.noticia-video-contenedor {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Estilo del reproductor de video --- */
+.noticia-video-contenedor video {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    display: block;
+    border-radius: 12px;
+    object-fit: contain;
+}
