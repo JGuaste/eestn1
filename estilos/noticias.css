@@ -120,17 +120,17 @@
 }
 
 .noticia {
-    background: transparent; /* Cambiado a transparente para que se vea el fondo blanco del pseudo-elemento */
+    background: transparent;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-    
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     position: relative;
-    z-index: 1; 
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box; /* Fundamental para que el padding no desborde */
+    overflow: hidden;       /* Evita que cualquier elemento interno rompa los bordes */
 }
 
 /* CAPA 1 (Más al fondo): El degradado amarillo */
@@ -351,19 +351,27 @@
 .noticia-video-contenedor {
     width: 100%;
     max-width: 100%;
-    margin: 20px 0;
+    margin: 15px auto;
     border-radius: 12px;
     overflow: hidden;
     background: #000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
 }
 
-/* --- Estilo del reproductor de video --- */
+/* --- Estilo del reproductor de video adaptativo --- */
 .noticia-video-contenedor video {
     width: 100%;
     height: auto;
-    max-height: 480px;
+    max-height: 550px; /* Altura máxima controlada para videos verticales */
     display: block;
+    margin: 0 auto;
     border-radius: 12px;
     object-fit: contain;
+    background: #000;
+}
+.noticia.expandida .noticia__extra {
+    max-height: 2000px; /* Subido de 1000px a 2000px para que entre el video y todo el texto */
+    opacity: 1;
+    margin: 1rem 0;
 }
