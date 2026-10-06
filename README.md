@@ -56,4 +56,5 @@ HAY QUE CORREGIR UN LINK, DE ELECTROMECÁNICA A NOTICIAS. quien???
 
 se agregó directorio videos, se actualiza seccion noticias e index. (Guastelli)
 
+https://script.google.com/macros/s/AKfycbxWEzS9IvUM_Ekyqzt5n2jypvLdYjGxwqXJbkSFeWaVBZG41_P9WoVHZ-_jE44joJmN2g/exec
 
