@@ -396,3 +396,16 @@
     opacity: 1;
     margin: 1rem 0;
 }
+
+/* --- Estilo para la imagen de la noticia de ciberseguridad --- */
+.img-ciber {
+    width: 100%;
+    max-width: 600px; /* Controla que no se vea excesivamente gigante en pantallas grandes */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Centra la imagen horizontalmente y le da espacio arriba y abajo */
+    border-radius: 12px; /* Mantiene la misma estética redondeada de tus videos y tarjetas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave para darle relieve */
+    object-fit: contain;
+    box-sizing: border-box;
+}
