@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Revisá los productos de tu carrito de la E.E.S.T. N°1.">
+  <title>Mi carrito - E.E.S.T. N°1</title>
+  <link rel="icon" href="imagenes/Logo.png" type="image/png">
+  <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="estilos/carrito.css">
+  <link rel="stylesheet" href="estilos/nav-footer.css">
+</head>
+<body>
+  <header class="carrito-header">
+    <a href="marketplace.html">← Volver al Marketplace</a>
+    <a class="enlace-carrito" href="carrito.html" aria-label="Carrito: 0 productos">
+      <svg viewBox="0 0 48 48" width="28" height="28" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 11h5l4 17h17l4-13H15"/>
+          <circle cx="20" cy="34" r="2.5"/><circle cx="32" cy="34" r="2.5"/>
+        </g>
+      </svg>
+      <span id="contador-carrito">0</span>
+    </a>
+  </header>
+
+  <main class="carrito-pagina">
+    <h1>Mi carrito</h1>
+    <div class="carrito-layout">
+      <section class="columna-productos" aria-label="Productos del carrito">
+        <div class="seleccion-todos tarjeta">
+          <label class="check-label" for="seleccionar-todos">
+            <input id="seleccionar-todos" type="checkbox">
+            <span>Todos los productos</span>
+          </label>
+          </button>
+        </div>
+
+        <section class="grupo tarjeta">
+          <header class="grupo-cabecera"><strong>Productos</strong></header>
+          <div id="productos-carrito" aria-live="polite"></div>
+          <div class="entrega">
+            <div class="entrega-titulo"><span>Entrega</span><strong>A coordinar</strong></div>
+            <p>Coordiná el retiro o la entrega con la escuela al confirmar tu pedido.</p>
+          </div>
+        </section>
+      </section>
+
+      <aside class="resumen tarjeta" aria-label="Resumen de compra">
+        <h2>Resumen de compra</h2>
+        <div class="resumen-contenido">
+          <p><span>Productos (<span id="cantidad-seleccionada">0</span>)</span><span id="subtotal-carrito">$ 0</span></p>
+          <p><span>Entrega</span><span>A coordinar</span></p>
+          <p class="total"><strong>Total</strong><strong id="total-carrito">$ 0</strong></p>
+          <button class="continuar" id="continuar-compra" type="button" disabled>Enviar pedido por WhatsApp</button>
+          <a class="seguir-comprando" href="marketplace.html">Seguir mirando productos</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <script src="carrito.js" defer></script>
+</body>
+</html>
