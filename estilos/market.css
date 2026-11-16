@@ -24,6 +24,33 @@ body {
     animation: aparecer 0.8s ease both;
 }
 
+.btn-carrito {
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px auto;
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: #d9ad35;
+  color: #252525;
+  font: 700 18px Arial, sans-serif;
+  cursor: pointer;
+}
+
+.btn-carrito:hover {
+  background: #edc64f;
+}
+
+.btn-carrito svg {
+  flex: 0 0 24px;
+}
+#mensaje-carrito {
+  color: white;
+  text-align: center;
+}
+
 .market-hero h1 {
     font-family: var(--fuente-titulos);
     font-size: clamp(1.8rem, 4vw, 2.6rem);
