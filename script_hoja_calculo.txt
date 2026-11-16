@@ -1,0 +1,50 @@
+function doGet(e) {
+  var callback = e.parameter.callback;
+  var resultado;
+
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var data = e.parameter;
+    var fechaHora = new Date();
+    var CUPO_MAXIMO = 19;
+
+    if (data.anio === '3er año' && data.modalidad) {
+      var valores = sheet.getDataRange().getValues();
+      var inscriptos = 0;
+      for (var i = 1; i < valores.length; i++) {
+        if (valores[i][7] === data.modalidad) {
+          inscriptos++;
+        }
+      }
+      if (inscriptos >= CUPO_MAXIMO) {
+        resultado = { result: "cupo_lleno", modalidad: data.modalidad };
+        return construirRespuesta(callback, resultado);
+      }
+    }
+
+    sheet.appendRow([
+      fechaHora,
+      data.nombre,
+      data.dni,
+      data.tel,
+      data.email,
+      data.anio,
+      data.procedencia,
+      data.modalidad
+    ]);
+
+    resultado = { result: "success" };
+
+  } catch (error) {
+    resultado = { result: "error", error: error.toString() };
+  }
+
+  return construirRespuesta(callback, resultado);
+}
+
+function construirRespuesta(callback, obj) {
+  var json = JSON.stringify(obj);
+  return ContentService
+    .createTextOutput(callback + '(' + json + ')')
+    .setMimeType(ContentService.MimeType.JAVASCRIPT);
+}
