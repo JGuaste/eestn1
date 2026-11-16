@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Evento para mostrar u ocultar el campo de modalidad según el año seleccionado
   selectAnio.addEventListener('change', function () {
-    if (this.value === '3er año') {
+    if (this.value === '4to año') {
       grupoModalidad.style.display = 'block'; // Muestra el contenedor de modalidad
       selectModalidad.required = true;       // Hace que el select sea obligatorio
     } else {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('formInscripcion').addEventListener('submit', function(e) {
     e.preventDefault(); // Evita el envío tradicional de la página para controlarlo mediante script
 
-    const urlBase = 'https://script.google.com/macros/s/AKfycbyP_PM4L9li3Mtax9xxV2xawt8zEZyOx3YqTRQ7s83tNsiFUJ3gRgHAHGiDoU5_QIcP7g/exec';
+    const urlBase = 'https://script.google.com/macros/s/AKfycbyg2t-iD_MmemSZIoyrtNFVSZ6Wm4l093vlDVjWWf7XJ9orgdRbyjdkH9LcWotedbr0/exec';
     const formData = new FormData(this);
     const params = new URLSearchParams(formData);
 
