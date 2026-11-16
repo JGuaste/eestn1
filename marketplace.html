@@ -58,6 +58,24 @@
             </li>
             <div class="linea"></div>
             <li><a href="marketplace.html" aria-current="page">Marketplace</a></li>
+            <li>
+  <a href="carrito.html"
+     class="enlace-carrito"
+     aria-label="Carrito: 0 productos"
+     style="position:relative; display:inline-flex; align-items:center; padding:6px 10px;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+         width="28" height="28" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 11h5l4 17h17l4-13H15"/>
+        <circle cx="20" cy="34" r="2.5"/>
+        <circle cx="32" cy="34" r="2.5"/>
+      </g>
+    </svg>
+    <span id="contador-carrito"
+          style="position:absolute; top:-2px; right:-2px; min-width:18px; height:18px; padding:0 4px; border-radius:999px; background:var(--color-acento); color:#222; font-size:12px; font-weight:bold; line-height:18px; text-align:center;">0</span>
+  </a>
+</li>
         </ul>
     </nav>
 </header>
@@ -86,6 +104,11 @@
                 <img src="imagenes/whatsapp3.png" alt="" width="20" height="20">
                 Pedir por WhatsApp
             </a>
+            <button class="btn-carrito" type="button" data-id="tablas-madera" data-nombre="Tablas de madera" data-precio="6000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11h5l4 17h17l4-13H15"/><circle cx="20" cy="34" r="2.5"/><circle cx="32" cy="34" r="2.5"/></g></svg>  <span>Agregar al carrito</span>
+</button>
+<p class="mensaje-producto" aria-live="polite"></p>
+
         </article>
         <article class="tarjeta-producto" data-categoria="electromecanica" style="--orden: 0;">
             <span class="categoria-badge" data-categoria="electromecanica">Electromecánica</span>
@@ -98,6 +121,10 @@
                 <img src="imagenes/whatsapp3.png" alt="" width="20" height="20">
                 Pedir por WhatsApp
             </a>
+            <button class="btn-carrito" type="button" data-id="compost-5dm3" data-nombre="Compost elaborado - bolsa de 5 dm³" data-precio="3000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11h5l4 17h17l4-13H15"/><circle cx="20" cy="34" r="2.5"/><circle cx="32" cy="34" r="2.5"/></g></svg>  <span>Agregar al carrito</span>
+</button>
+<p class="mensaje-producto" aria-live="polite"></p>
         </article>
         <article class="tarjeta-producto" data-categoria="electromecanica" style="--orden: 0;">
             <span class="categoria-badge" data-categoria="electromecanica">Electromecánica</span>
@@ -110,7 +137,10 @@
                 <img src="imagenes/whatsapp3.png" alt="" width="20" height="20">
                 Pedir por WhatsApp
             </a>
-        </article>
+                        <button class="btn-carrito" type="button" data-id="compost-50kg" data-nombre="Compost elaborado - bolsa de 50 kg" data-precio="70000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11h5l4 17h17l4-13H15"/><circle cx="20" cy="34" r="2.5"/><circle cx="32" cy="34" r="2.5"/></g></svg>  <span>Agregar al carrito</span>
+</button>
+<p class="mensaje-producto" aria-live="polite"></p></article>
                 <article class="tarjeta-producto" data-categoria="electromecanica" style="--orden: 0;">
             <span class="categoria-badge" data-categoria="electromecanica">Electromecánica</span>
             <h3>Pedido por encargue</h3>
@@ -121,7 +151,7 @@
                 <img src="imagenes/whatsapp3.png" alt="" width="20" height="20">
                 Pedir por WhatsApp
             </a>
-        </article>
+                        </article>
         
         <article class="tarjeta-producto" data-categoria="alimentos" style="--orden: 1;">
             <span class="categoria-badge" data-categoria="alimentos">Alimentos</span>
@@ -133,7 +163,10 @@
                 <img src="imagenes/whatsapp3.png" alt="" width="20" height="20">
                 Pedir por WhatsApp
             </a>
-        </article>
+                        <button class="btn-carrito" type="button" data-id="barritas-cereal" data-nombre="Barritas de cereal" data-precio="1000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11h5l4 17h17l4-13H15"/><circle cx="20" cy="34" r="2.5"/><circle cx="32" cy="34" r="2.5"/></g></svg>  <span>Agregar al carrito</span>
+</button>
+<p class="mensaje-producto" aria-live="polite"></p></article>
         
          <article class="tarjeta-producto" data-categoria="alimentos" style="--orden: 1;">
             <span class="categoria-badge" data-categoria="alimentos">Alimentos</span>
@@ -145,7 +178,10 @@
                 <img src="imagenes/whatsapp3.png" alt="" width="20" height="20">
                 Pedir por WhatsApp
             </a>
-        </article>
+                        <button class="btn-carrito" type="button" data-id="mermeladas" data-nombre="Mermeladas" data-precio="5000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11h5l4 17h17l4-13H15"/><circle cx="20" cy="34" r="2.5"/><circle cx="32" cy="34" r="2.5"/></g></svg>  <span>Agregar al carrito</span>
+</button>
+<p class="mensaje-producto" aria-live="polite"></p></article>
         <p class="market-vacio" id="market-vacio" style=
         "display: none;
         color: #fff;
@@ -172,7 +208,7 @@
                 <p>02358 44-4142</p>
             </div>
 
-            <div class="footer-col reveal style="--retraso: 0.24s;">
+            <div class="footer-col reveal" style="--retraso: 0.24s;">
                 <h4>Seguinos</h4>
                 <div class="footer-redes">
                     <div class="social"><a href="https://www.facebook.com/escuela.tecnica.52/?locale=es_LA" target="_blank" rel="noopener noreferrer" aria-label="Facebook de la escuela"><img src="imagenes/facebook.gif" alt=""></a></div>
@@ -187,5 +223,7 @@
         </div>
     </footer>
 <script src="script.js"></script>
+<script src="carrito.js"></script>
 </body>
 </html>
+
