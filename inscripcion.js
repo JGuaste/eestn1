@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // ---------- Filtros en tiempo real mientras se escribe ----------
 
   // DNI y teléfono: solo números
-  ['dni', 'telefono'].forEach(function (nombre) {
+  ['dni', 'tel'].forEach(function (nombre) {
     const campo = obtenerCampo(nombre);
     if (!campo) return;
     campo.addEventListener('input', function () {
@@ -54,9 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const nombre   = valor('nombre');
     const dni      = valor('dni');
-    const telefono = valor('telefono');
+    const telefono = valor('tel');
     const email    = valor('email');
-    const escuela  = valor('escuela');
+    const escuela  = valor('procedencia');
     const anio     = selectAnio.value;
 
     if (nombre.length < 3 || !/^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ' ]+$/.test(nombre)) {
