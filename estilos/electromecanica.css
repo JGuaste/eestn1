@@ -34,7 +34,7 @@ font-family: var(--fuente-titulos);
 .fondoElectro{  
     background-image:
     linear-gradient(rgba(255, 255, 255, 0.35)),
-   url(/imagenes/fondoelectro.png);
+   url(/imagenes/fondoelectro.webp);
   background-repeat: repeat;
   background-size: auto;
  
